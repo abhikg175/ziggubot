@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RASA Chatbot</title>
+</head>
+<body>
+  <h1>My Rasa Chatbot</h1>
+  <div id="webchat"></div>
+  <script src="https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"></script>
+  <script>
+    window.WebChat.default({
+      customData: { language: "en" },
+      socketUrl: "http://localhost:5005",
+      socketPath: "/socket.io/",
+      title: "My Chatbot",
+      subtitle: "How can I help you today?",
+      initPayload: "/greet",
+      params: { storage: "session" },
+      onSocketEvent: (event) => {
+        console.log('Socket event:', event);
+      },
+    }, null);
+    
+    // Debugging
+    window.addEventListener('error', function(e) {
+      console.error('Global error:', e.message, e.filename, e.lineno);
+    });
+  </script>
+</body>
+</html>

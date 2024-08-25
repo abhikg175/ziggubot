@@ -1,0 +1,542 @@
+version: "3.1"
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+
+intents:
+  - greet
+  - goodbye
+  - sizes
+  - types_of_art
+  - types_of_artwork_collections
+  # - types_of_painting
+  - price_range
+  - top_selling_genre
+  - working_hours
+  - offers
+  - supporting_transactions
+  - order_id
+  - invalid_order_id
+  - track_order
+  # - search_artwork
+  - view_artist_profiles
+  - view_artwork_categories
+  - frame_preference
+  - purchase_artwork
+  - contest_information
+  - contact_information
+  - faqs
+  - frame_recommendation
+  - material_preference
+  - color_preference
+  - recommendations
+  - feedback_suggestions
+  - artwork_availability
+  - artwork_unavailability
+  - artwork_description
+  - order_status
+  - payment_assistance
+  - shipping_information
+  - artwork_customization
+  - artwork_reviews 
+  - artwork_authentication 
+  - artwork_preservation
+  - dissatisfaction
+  - deny
+  - order_status_failure
+  - inquire_types_of_art
+  - matting
+  - size_custom
+  - other_custom
+  - frame_custom
+  - invalid_tracking_order_id
+  - generic_contest_information
+  - upcoming_contest_information
+  - sizes_recommend
+  - search_artworks :
+       use_entities:
+       - artist_name
+  # - search_artwork_by_theme 
+  # - search_artwork_by_title :
+  #     use_entities:
+  #     - title
+
+  # - search_artwork_by_style :
+  #     use_entities:
+  #     - style
+
+  # - search_artwork_by_category :
+  #     use_entities:
+  #     - category
+  # - search_artwork_by_price :
+  #     use_entities:
+  #     - price 
+
+
+actions:
+  - utter_greet
+  - utter_goodbye
+ # - utter_types_of_painting
+  - utter_painting_art_collection
+  - utter_digital_art_collection
+  - utter_sculpture_art_collection
+  - utter_prints_art_collection
+  - utter_drawing_art_collection
+  - utter_photography_art_collection
+  - utter_serigraph_art_collection
+  - utter_textile_art_collection
+  - utter_jewellery_art_collection
+  - utter_types_of_art
+  - utter_sizes_info
+  - utter_ask_price_range
+  - utter_price_range_not_found
+  - utter_top_selling_genre
+  - utter_top_selling_genre_abstract
+  - utter_top_selling_genre_landscapes
+  - utter_top_selling_genre_portraits
+  - utter_top_selling_genre_Abstraction
+  - utter_top_selling_genre_Conceptual
+  - utter_top_selling_genre_Figurative
+  - utter_types_of_artwork_collections
+  - utter_frame_recommendation
+  - utter_sizes_recommendation
+  - utter_material_preference
+  - utter_color_preference
+  - utter_frame_preference
+  - utter_artwork_description
+  - utter_working_hours_info
+  - utter_offers_promotion
+  - utter_offers_discount
+  - utter_offers_free_shipping
+  - utter_offers_personalized_deal
+  - utter_supporting_transactions
+  - utter_order_id
+  - utter_invalid_order_id
+  - utter_track_order
+  - utter_invalid_tracking_order
+  - utter_order_id_received
+  # - utter_search_artwork_by_title
+  - action_search_artworks
+  # - utter_search_artwork_by_category
+  # - utter_search_artwork_by_style
+  # - utter_default_search_artwork
+  - utter_artist_profile
+  - utter_no_artist_profiles
+  - utter_show_artwork_categories
+  - utter_show_specific_category
+  - utter_default_artwork_categories
+  - utter_ongoing_contest_info
+  - utter_upcoming_contest_info
+  - utter_generic_contest_info
+  - utter_purchase_artwork
+  - utter_contact_info_general
+
+  - utter_thank_you_feedback
+  - utter_artwork_available
+  - utter_artwork_unavailable
+  - utter_provide_order_status
+  - utter_order_status_failure
+  - utter_payment_assistance
+  - utter_shipping_information
+  - utter_customization_options
+  - utter_frame_customization
+  - utter_size_customization
+  - utter_other_customization_options
+  - utter_ask_for_review
+  - utter_ask_comment
+  - utter_thank_you_review
+  - utter_sorry_feedback
+  - utter_ask_another_review
+  - utter_authentication_info
+  - utter_authentication_assistance
+  - utter_authentication_redirect
+  - utter_preservation_tips
+  - utter_artwork_preservation_resources
+  - utter_artwork_preservation_products
+  - utter_acknowledge_feedback
+  - utter_feedback_contact_support
+  - utter_dissatisfaction
+  - utter_faqs
+  - utter_recommendations
+  # - action_search_artwork_by_theme
+  # - action_search_artwork_by_title
+  # - action_search_artwork_by_style
+  # - action_search_artwork_by_category
+  # - action_search_artwork_by_price
+  - action_fallback_search_products
+
+
+entities:
+  - artwork_keywords
+  - artwork_type
+  - artwork_title 
+  - artwork_category
+  - artwork_collection_type
+  - artwork_style
+  - artwork_size
+  - artwork_medium
+  - artwork_price_range
+  - artwork_availability
+  - artist_name
+  - artwork_collection
+  - frame_Material
+  - Frame_Color
+  - size
+  #- Style
+  - Medium
+  - Colors
+  - Painting_Type
+  - Size_Type
+  - Genre
+  - Collection_Type
+  - Time_Unit
+  - Offer_Type
+  - Transaction_Type
+  - Order_ID
+  - Artist
+  #- Theme
+  - Description 
+  - Era 
+  - theme
+  - title
+  - style
+  - category
+  - price
+  - min_price
+  - max_price
+
+responses:
+
+  utter_greet:
+  - text: "Hello! How can I assist you today?"
+
+  utter_goodbye:
+  - text: "Goodbye!"
+
+  utter_dissatisfaction:
+  - text: "We are sorry for the inconvenience"
+
+  utter_sizes_info:
+  - text: "Our artworks are available in various sizes to suit different preferences and spaces. We offer sizes ranging from small to large, including standard sizes such as 8x10 inches, 16x20 inches, and 24x36 inches. Additionally, we also offer custom sizing options for certain artworks. Feel free to explore our collection to find the perfect size for your needs."
+  utter_recommendations:
+  - text: "I'm glad you liked the recommendations! If you need further assistance or have any other questions, feel free to ask."
+  utter_sizes_recommendation:
+  - text: "When choosing the size of your artwork, consider the available wall space and the visual impact you want to create. Larger artworks can make a bold statement and become focal points in a room, while smaller artworks are great for creating intimate displays or complementing existing decor. If you're unsure about the size, we recommend measuring your wall space and visualizing different sizes using our virtual preview tool."
+  
+  utter_frame_recommendation:
+  - text: "After analyzing your requirements and considering your preferences, I recommend focusing on a minimalist design approach for your project. This approach emphasizes clean lines, simple shapes, and a neutral color palette to create a sleek and modern aesthetic. By keeping the design clean and uncluttered, we can ensure that the focus remains on the content and functionality of your project, providing users with a seamless and intuitive experience."
+  
+  utter_frame_preference:
+  - text: "Sure, I can help with that. What type of frame are you looking for? We have options like metal, wood, plastic, and more"
+  
+  utter_material_preference:
+  - text: "What type of material are you looking for? You can choose from options like wood, metal, plastic, or fabric."
+
+  utter_color_preference:
+  - text: "Great choice! Now, what color are you interested in? Feel free to specify your preferred color or ask for suggestions."
+
+  utter_artwork_description:
+  - text: "Sure, I'd be happy to describe the artwork for you. Could you please provide me with some details about the artwork you'd like to know about?"
+ 
+
+  utter_types_of_art:
+  - text: "There are various types of art, including painting, sculpture, photography, music, literature, dance, theater, and more. Which type are you interested in learning more about?"
+
+  # utter_types_of_painting:
+  # - text: "There are various painting styles, including abstract, impressionism, realism, surrealism, and many more. Each style has its unique characteristics and techniques."
+
+  utter_ask_price_range:
+  - text: "Our artwork prices typically range from  ₹ 2000-1500000. Would you like to explore artworks within a specific price range?"
+
+  utter_price_range_not_found:
+  - text: "I'm sorry, but I couldn't find any artworks within that price range. Would you like to explore other options?"
+  utter_top_selling_genre_abstract:
+  - text: "Abstract art is currently one of our top-selling genres. Its versatility and ability to evoke emotion make it a popular choice among art enthusiasts."
+
+  utter_top_selling_genre_landscapes:
+  - text: "Landscapes are among our top-selling genres. Many customers appreciate the beauty of natural scenery captured in these artworks."
+
+  utter_top_selling_genre_portraits:
+  - text: "Portraits are consistently popular and one of our top-selling genres. Many customers enjoy having personalized artworks of themselves or loved ones."
+
+  utter_top_selling_genre_Abstraction:
+  - text: "Abstract artwork often seeks to convey emotions, concepts, or ideas through non-representational forms and colors, inviting viewers to interpret and engage with the piece on a personal level. By distilling elements of reality into simplified shapes and colors, abstraction encourages viewers to explore the artwork's visual language and evoke their imagination."
+
+  utter_top_selling_genre_Conceptual:
+  - text: "Conceptual artwork often emphasizes ideas and concepts over traditional aesthetic concerns, challenging viewers to think critically about the meaning behind the pieIt can take various forms, including installations, performances, and multimedia works, aiming to provoke thought and stimulate discourse about social, political, or philosophical issues."
+
+  utter_top_selling_genre_Figurative:
+  - text: "Figurative artwork depicts recognizable elements from the real world, often featuring human figures or objects derived from life. It can convey narratives, emotions, and symbolism through the representation of the human form and its interactions with the surrounding environment."
+
+  utter_top_selling_genre:
+  - text: "The top-selling genre of artwork on our platform currently is landscape paintings. They're highly popular among our customers for their timeless appeal and versatility."
+  
+  utter_types_of_artwork_collections:
+  - text: "We provide varipous collections which includes sculptures, digital art, jewellery art collection, prints, textile art, serigraph,photography, drawing and paintings."
+  
+  utter_painting_art_collection:
+  - text: "Painting art collections are often chosen for their ability to evoke emotions and captivate viewers through visual storytelling and expression. Additionally, they serve as timeless investments, showcasing cultural heritage and artistic mastery while adding aesthetic value to spaces."
+
+  utter_sculpture_art_collection:
+  - text: "Sculpture art collections are often chosen for their tactile presence, adding depth and dimensionality to a space that cannot be achieved with two-dimensional artworks alone. They also offer timeless elegance, serving as focal points that invite contemplation and evoke emotional responses from viewers."
+
+  utter_digital_art_collection:
+  - text: "Digital art collections are chosen for their versatility and accessibility, allowing for easy sharing and display across various digital platforms. Additionally, digital artworks often offer innovative and dynamic experiences, attracting collectors seeking modern and cutting-edge pieces for their collections."
+
+  utter_drawing_art_collection:
+  - text: "Drawing art collections are chosen for their ability to capture moments of spontaneity and expression, offering a glimpse into the artist's creative process and emotional depth. They often showcase diverse styles, techniques, and subjects, appealing to collectors seeking intimate and evocative artworks."
+
+  utter_photography_art_collection:
+  - text: "Photography art collections are chosen for their ability to capture moments in time with precision and emotion, offering viewers a unique perspective on the world. They provide a diverse range of subjects, styles, and techniques, allowing collectors to curate collections that reflect their personal interests and aesthetic preferences."
+
+  utter_prints_art_collection:
+  - text: "Prints art collections are chosen for their accessibility and affordability, offering high-quality reproductions of original artworks at a fraction of the cost. They allow art enthusiasts to enjoy renowned masterpieces or contemporary designs in their homes without breaking the bank, making art appreciation more inclusive and widespread."
+
+  utter_serigraph_art_collection:
+  - text: "Serigraph art collections are chosen for their vibrant colors and unique texture, capturing intricate details with precision and depth, making them a popular choice among art enthusiasts seeking distinctive and visually striking pieces for their collections. Additionally, the limited edition nature of serigraphs adds exclusivity and value, appealing to collectors looking for investment-worthy artworks with a touch of individuality."
+
+  utter_textile_art_collection:
+  - text: "Textile art collections are chosen for their tactile nature, inviting viewers to engage with the artwork on a sensory level, and for their ability to convey cultural narratives and personal stories through intricate weaving techniques and rich textures. Additionally, textile art adds depth and warmth to spaces, offering a unique blend of functionality and aesthetics that appeals to diverse audiences."
+
+  utter_jewellery_art_collection:
+  - text: "Jewelry art collections are chosen for their intricate craftsmanship and timeless elegance, symbolizing both personal style and cultural heritage. Each piece showcases meticulous design and exquisite materials, making it a cherished expression of individuality and sophistication."
+
+  utter_working_hours_info:
+  - text: "Our customer support team is available to assist you during our business hours from Monday to Saturday, 9:00 AM to 6:00 PM. Please feel free to reach out to us during these hours for any inquiries or assistance."
+  
+  utter_search_artworks:
+   - text: "please provide the artist name "
+
+  utter_offers_promotion:
+  - text: "We currently have a promotion running! You can avail offers on artworks. Don't miss out!"
+  utter_offers_discount:
+  - text: "Enjoy a special discount on our featured artworks on your purchase for a limited time."
+  utter_offers_free_shipping:
+  - text: "Get free shipping on all orders placed during our promotion period! It's the perfect time to shop for your favorite artworks."
+  utter_offers_personalized_deal:
+  - text: "Looking for a personalized deal? Contact us directly, and we'll tailor an offer just for you based on your preferences."
+  utter_supporting_transactions:
+  - text: "We support various transaction methods including credit/debit cards, PayPal, and bank transfer. How would you like to proceed with your payment?"
+  utter_order_id:
+  - text: "Please provide your order ID so that I can assist you further."
+  utter_order_id_received:
+  - text: "Thank you for providing your order ID. How can I help you with your order?"
+  utter_invalid_order_id:
+  - text: "Sorry, the provided order ID seems to be invalid. Please double-check and try again."
+  utter_track_order:
+  - text: "Sure! Please provide me with your order tracking number."
+  utter_invalid_tracking_order:
+  - text: "I'm sorry, but the tracking number you provided is invalid. Please double-check and try again."
+  
+  # utter_search_artworks:
+  # - text: "which artist paitings u want to see?"
+  #utter_search_artwork_by_style:
+  #- text: "Searching for artwork with the style '{style}'."
+  utter_default_search_artwork:
+  - text: "Searching for artwork. Please provide more specific details if available."
+  utter_artist_profile:
+  - text: "Sure! You can view the profiles of our artists on our website. Please visit Zigguratss - Your Global Art Gallery to explore their work and learn more about their backgrounds."
+  utter_no_artist_profiles:
+  - text: "I'm sorry, but we don't currently have artist profiles available on our platform. However, you can explore our collection of artworks and discover pieces you love!"
+  utter_show_artwork_categories:
+  - text: "Here are the main categories of artwork available on our platform: paintings, sculptures, drawings, photography, prints, mixed media, and digital art."
+  utter_show_specific_category:
+  - text: "Sure! Let me show you the paintings category."
+
+  utter_default_artwork_categories:
+  - text: "We offer a wide range of artwork categories. Could you please specify which category you're interested in?"
+  utter_purchase_artwork:
+  - text: "To purchase the artwork, please visit our website or contact our sales team."
+  utter_ongoing_contest_info:
+  - text: "Currently, we have the following contests running where one person can vote for 3 artworks. You can participate and showcase your talent!"
+  utter_upcoming_contest_info:
+  - text: "We have some exciting contests coming up soon! Stay tuned for more details on our upcoming events."
+  utter_generic_contest_info:
+  - text: "For information about our contests, please visit our website or contact our support team."
+  utter_contact_info_general:
+  - text: "You can contact our customer support team via email at info@zigguratts.com or by phone at +91 7838535496"
+
+  utter_artwork_preservation_tips:
+  - text: "Preserving artworks is crucial for their longevity. Here are some general tips:\n1. Keep artworks away from direct sunlight and extreme temperatures.\n2. Use archival-quality materials for framing and storing artworks.\n3. Handle artworks with clean hands to avoid oils and dirt.\n4. Consider using UV-protective glass or acrylic for framing.\n5. Regularly dust and clean artworks with a soft, dry cloth.\n6. Store artworks in acid-free containers or folders to prevent deterioration.\nRemember, proper preservation practices can help maintain the beauty and value of your artworks over time."
+
+  utter_artwork_preservation_resources:
+  - text: "If you're looking for more detailed information on artwork preservation techniques, here are some recommended resources:\n1. The Getty Conservation Institute: https://www.getty.edu/conservation/\n2. The American Institute for Conservation of Historic and Artistic Works (AIC): https://www.culturalheritage.org/\n3. Library of Congress - Preservation Directorate: https://www.loc.gov/preservation/\nThese resources offer valuable insights and guidelines for preserving various types of artworks."
+
+  utter_artwork_preservation_products:
+  - text: "There are several products available in the market specifically designed for artwork preservation. Some commonly used products include:\n1. Archival storage boxes and folders\n2. Acid-free mat boards\n3. UV-protective framing glass or acrylic\n4. Conservation-grade adhesives and mounting materials\n5. Dehumidifiers and humidity control products\nWhen selecting products, ensure they are archival-quality and suitable for the type of artwork you want to preserve."
+    
+  
+  utter_ask_feedback_suggestions:
+  - text: "We appreciate your feedback! Please feel free to share any suggestions or comments you have. Your input helps us improve our services."
+  utter_thank_you_feedback:
+  - text: "Thank you for your feedback! We'll consider your suggestions to enhance our services."
+  utter_acknowledge_feedback:
+  - text: "Got it! Your feedback has been noted. If you have any more suggestions or comments, feel free to share."
+  utter_feedback_contact_support:
+  - text: "If you have specific concerns or need further assistance, please don't hesitate to contact our support team."
+  utter_artwork_available:
+  - text: "Yes, the artwork you're interested in is currently available. Would you like to proceed with the purchase?"
+  utter_artwork_unavailable:
+  - text: "I'm sorry, but the artwork you're looking for is currently unavailable. Is there anything else I can assist you with?"
+  utter_provide_order_status:
+  - text: "Your order status is currently processing. Would you like more details?"
+  utter_order_status_failure:
+  - text: "I'm sorry, but I couldn't find any information about your order status. Please double-check the order details or contact customer support for further assistance."
+  utter_payment_assistance:
+  - text: "We have differen apyment assistance, one can con contact our customer support team.If you need assistance with payment, our customer support team is available 24/7 to help you. You can reach them at info@zigguratts.com or call us at +91 7838535496."
+  
+  utter_shipping_information:
+  - text: "Sure! Here is the shipping information: Our standard shipping time is 5-7 business days within the continental US. For international orders, shipping time may vary. We offer expedited shipping options as well. If you have any specific shipping questions, feel free to ask!"
+
+  utter_customization_options:
+  - text: "We offer various customization options to suit your preferences. You can choose from options such as frame type, size, matting, and more. Let me know how you'd like to customize your artwork!"
+  utter_frame_customization:
+  - text: "For frame customization, we offer a range of materials including wood, metal, and acrylic. You can also choose different finishes and styles to complement your artwork."
+  utter_size_customization:
+  - text: "Size customization allows you to select the dimensions of your artwork to fit your space perfectly. We offer a variety of standard sizes, or you can request a custom size."
+  utter_matting_options:
+  - text: "Matting adds a professional touch to your artwork presentation. Choose from different mat board colors and thickness to enhance the visual appeal."
+  utter_other_customization_options:
+  - text: "In addition to frame, size, and matting options, we also provide customization services such as mounting, framing glass types, and special finishing touches. Let us know your preferences!"
+  utter_ask_for_review:
+  - text: "We value your feedback! Would you like to leave a review for a specific artwork?"
+
+  utter_ask_rating:
+  - text: "Thank you for choosing to leave a review! On a scale of 1 to 5, how would you rate the artwork?"
+
+  utter_ask_comment:
+  - text: "Great! Please provide any additional comments or feedback you have about the artwork."
+
+  utter_thank_you_review:
+  - text: "Thank you for sharing your review with us! Your feedback helps us improve our services."
+
+  utter_sorry_feedback:
+  - text: "We're sorry to hear that you're not satisfied. Please provide more details so we can address your concerns."
+
+  utter_ask_another_review:
+  - text: "Would you like to leave a review for another artwork?"
+
+  utter_authentication_info:
+  - text: "Our authentication process involves thorough examination and verification of artworks by certified experts to ensure their authenticity and provenance."
+
+  utter_authentication_assistance:
+  - text: "If you have concerns about the authentication of a specific artwork, feel free to provide details, and we'll do our best to assist you."
+
+  utter_authentication_redirect:
+  - text: "For professional authentication services, we recommend reaching out to our partnered authentication experts who specialize in verifying artwork authenticity."
+
+
+
+  utter_preservation_tips:
+  - text: "Sure! Here are some tips for preserving your artworks:Here are some tips for preserving your artworks: Keep artwork away from direct sunlight and extreme temperatures to prevent fading and deterioration.Handle artwork with clean hands or gloves to avoid transferring oils and dirt, and minimize touching the surface.Use acid-free materials for framing, matting, and backing to prevent discoloration and damage over time.Regularly dust artwork with a soft, dry brush or cloth to remove accumulated dirt and debris.Store artwork in a stable environment with controlled humidity and temperature to prevent warping and mold growth.Avoid hanging artwork in high-humidity areas like bathrooms or near sources of moisture to prevent mold and mildew.Consider professional conservation and restoration services for valuable or delicate artworks to maintain their integrity."
+  utter_faqs:
+    - text: "Sure! Here are some frequently asked questions:\n\n1. How do I place an order?\n2. What payment methods do you accept?\n3. How can I track my order?\n4. Do you offer international shipping?\n5. What is your return policy?\n\nIf you have any other questions, feel free to ask!"
+ 
+ 
+  # utter_search_artwork_by_theme:
+  # - text: "Here are some artworks related to {theme}:\n{response}"
+  # utter_search_artwork_by_title:
+  #   - text: "Here are some artworks related to {title}:\n{response}"
+  # utter_search_artwork_by_style:
+  #   - text: "Here are some artworks related to  {style}:\n{response}"
+  # utter_search_artwork_by_category:
+  #   - text: "Here are some artworks related to  {category}:\n{response}"
+  
+  # utter_search_artwork_by_price:
+  #   - text: "Here are some artworks under price {price}:\n{response}"
+
+
+
+
+slots:
+  intent:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: intent
+  artwork_collection_type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: artwork_collection_type
+  requested_category:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: requested_category
+  requested_slot:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: requested_slot
+  
+  artist_name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: artist_name
+        case_sensitive: False
+
+  theme:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: theme
+  title:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: title
+  style:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: style
+  category:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: category
+  
+  price:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: price
+      - type: from_text
+  min_price:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: min_price
+      - type: from_text
+  max_price:
+    type: float
+    mappings:
+      - type: from_entity
+        entity: max_price
+      - type: from_text
+
+ 
+
+
+  
+
+forms:
+  order_form:
+    required_slots:
+    - intent
+    - artwork_collection_type
+    - requested_category
+    - requested_slot
+  artwork_review_form:
+    required_slots:
+    - intent
+    - artwork_collection_type
+    - requested_category
+    - requested_slot

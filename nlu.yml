@@ -1,0 +1,2452 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - Hello!
+      - Hi there!
+      - Good morning
+      - Good evening
+      - Good afternoon
+      - Hey
+      - Hi, how are you?
+      - Hi, what's up?
+      - Greetings
+      - Hiya
+      - Heyya
+      - Hi
+      - Let’s go
+      - heyy
+      - Hii
+      - Hello there!
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+      - See you later
+      - Take care!
+      - Bye bye
+      - Have a nice day!
+      - Have a great day!
+      - Until next time!
+      - So long!
+      - See you soon!
+      - See you around! 
+      - good by
+      - Adios!
+      - Talk to you later
+      - Signing off!
+
+  - intent: sizes
+    examples: >
+      - What sizes are available for your artwork?
+
+      - Can you provide information about the dimensions of the paintings?
+
+      - What are the standard sizes for your artwork?
+
+      - I'm looking for paintings in larger sizes.
+
+      - Do you offer custom sizes for your artwork?
+
+      - Can you tell me the dimensions of this artwork?
+
+      - What size options do you have?
+
+      - Are your paintings available in various sizes?
+
+      - How big are your artworks usually?
+
+      - Do you have small-sized paintings?
+
+      - Could you provide details about the sizes of your artworks?
+
+      - What is the largest size you offer?
+
+      - Are your paintings available in different dimensions?
+
+      - Can you recommend a size for my wall?
+
+      - I need a painting that fits a specific space. What size should I look for?
+
+      - sizes available?
+
+      - what are the sizes available
+      - what are the sizes?
+      - what are the sizes available?
+
+  - intent: types_of_art
+    examples: |
+      - What are the different types of art
+      - What are the different types of art?
+      - Can you tell me about various art forms?
+      - I'm interested in learning about different types of art.
+      - What are some popular forms of art?
+      - Can you explain the different categories of art?
+      - I want to know more about art styles.
+      - What kinds of art can I explore?
+      - Can you list some art genres
+      - Can you list some art genres?
+
+      - Tell me about the various art movements.
+      - I'm curious about the diversity in art.
+      - Are there specific types of art I should be aware of?
+      - Can you elaborate on the classifications of art?
+      - What are the main branches of art?
+      - I'd like to explore different artistic expressions.
+      - Can you provide an overview of art types?
+      - Types of art?
+      - Types?
+
+  - intent: price_range
+    examples: |
+      - What is the price range for your artwork?
+      - Can you provide me with the price range?
+      - How much do your artworks typically cost?
+      - What are the price ranges for different types of artwork?
+      - I'm looking for artwork in a specific price range.
+      - What's the price range for paintings in your collection?
+      - Can you tell me the price range for sculptures?
+      - What's the highest price range for your artwork?
+      - Do you have any artwork in the lower price range?
+      - Could you give me an idea of the price range for your pieces?
+      - What's the average price range for your artwork?
+      - Are there any discounts available within the price range?
+      - Can I find artwork within a budget-friendly price range?
+      - What's the starting price range for your artwork?
+      - Is there a wide price range for your collection?
+      - Could you specify the price range for limited edition pieces?
+      - Price?
+      - price range?
+      - range?
+
+  - intent: artwork_description
+    examples: |
+      - I have a portrait painting of a woman.
+      - The artwork features vibrant colors and abstract shapes.
+      - It's a still life with fruit and flowers.
+      - The painting depicts a city skyline at sunset.
+      - I have a modern art sculpture made of metal.
+      - It's a watercolor landscape of a mountain scene.
+      - The artwork is a black and white photograph of a city street.
+      - I have a large abstract canvas with bold brushstrokes.
+      - The piece is a mixed media collage with various textures.
+      - It's a minimalist artwork with geometric shapes.
+      
+  - intent: types_of_artwork_collections
+    examples: |
+      - Do you have any sculptures?
+      - I want to see your sculpture collection.
+      - do you have any serigraph art collection
+      - art collection?
+      - any digital or sculpture collection
+      - prints?
+      - painting collection?
+      - drawing?
+  # - intent: types_of_painting
+  #   examples: |
+  #     - do you have abstract paintings?
+  #     - Do you have landscape paintings?
+  #     - Do you have portrait paintings?
+  #     - Do you have conceptual paintings?
+  #     - Do you have figurative paintings?
+  #     - abstract painting?
+  #     - paintings?
+  #     - landscape?
+  - intent: top_selling_genre
+    examples: |
+      - What are the top selling genres?
+      - Can you tell me the most popular genres?
+      - Which genres sell the most?
+      - What types of art are currently trending?
+      - I'm curious about the top selling genres.
+      - Show me the most popular art genres.
+      - What are the best-selling art styles?
+      - Which genres are in high demand?
+      - Can you recommend the hottest art genres?
+      - What art styles are currently popular?
+      - I'm interested in the top selling art genres.
+      - Which types of artwork are most sought after?
+      - What are the most popular artistic genres?
+      - Show me the trending art categories.
+      - Can you list the top selling artistic genres?
+      - Top selling?
+      - most selling?
+
+
+  - intent: working_hours
+    examples: |
+      - Working hours?
+      - Working hrs?
+      - What are your working hours?
+      - When are you open?
+      - What are the office hours?
+      - Can you tell me when you're available?
+      - What times are you operational?
+      - When can I reach you?
+      - What time does your support team work?
+      - What are your business hours?
+      - Could you provide your working schedule?
+      - When is the customer service available?
+      - Tell me about your opening times.
+      - What hours are you accessible?
+      - When can I expect assistance?
+      - Are you available on weekends?
+      - What are your operating hours on weekdays?
+  - intent: offers
+    examples: |
+      - Any offers?
+      - Offers?
+      - Are there any ongoing offers?
+      - Can you tell me about the current discounts?
+      - Do you have any promotions running right now?
+      - Are there any deals available?
+      - What special offers do you have?
+      - Can I get a discount on my purchase?
+      - Are there any coupons I can use?
+      - Do you offer any incentives for new customers?
+      - What are the latest offers?
+      - Are there any limited-time promotions?
+      - Can you tell me about your sale events?
+      - Do you have any buy-one-get-one (BOGO) offers?
+      - Can I avail of any discounts with a loyalty program?
+      - Are there any special offers for holidays?
+      - Can I get a discount code for my next purchase?
+  - intent: supporting_transactions
+    examples: |
+      - transaction available?
+      - payment?
+      - Can I make a payment through the chatbot?
+      - How can I complete a transaction?
+      - Is it possible to buy artwork directly from the chatbot?
+      - I want to make a purchase. Can you assist me?
+      - How do I proceed with payment?
+      - Can I pay for my order using a credit card?
+      - What payment methods are supported?
+      - Can I use PayPal to make a payment?
+      - I need help with completing my purchase.
+      - Are transactions secure on this platform?
+      - How can I confirm my order?
+      - Can I check the status of my payment?
+      - What should I do if I encounter an issue during checkout?
+      - Can I cancel my order after making a payment?
+      - Do you provide refunds for canceled transactions?
+      - I'm having trouble completing my transaction. Can you help?
+      - How long does it take for a payment to process?
+  - intent: order_id
+    examples: |
+      - My order ID is 123456.
+      - Can you help me with my order ID 789012?
+      - I need assistance with order number 345678.
+      - The order ID for my purchase is 901234.
+      - I forgot my order ID, but it's for the item I purchased yesterday.
+      - Is it possible to track my order with ID 567890?
+      - Could you please provide details for order number 432109?
+      - Where can I find my order ID on the confirmation email?
+      - I'm trying to check the status of order ID 876543.
+      - I need to return an item, but I lost the order ID.
+      - Can you resend the order confirmation with ID 210987?
+      - My order ID is not recognized on the website.
+      - I'm having trouble completing the payment for order number 654321.
+      - I received an email notification about my order ID 543210.
+      - How long does it take to process orders with ID 109876?
+      - I want to cancel my order, and the ID is 987654.
+  - intent: invalid_order_id
+    examples: |
+      - The order ID is not in the correct format.
+      - I think I mistyped the order ID.
+      - I don't have the complete order ID.
+      - The order ID seems to be missing some digits.
+      - This order ID might be expired.
+      - I think this order ID is no longer valid.
+      - I can't find any orders with this ID.
+      - Are you sure this is the correct order ID?
+      - I already used this order ID for another request.
+      - Oops, I think I entered the same order ID again.
+  - intent: track_order
+    examples: |
+      - track order
+      - How can I track my orders?
+      - Can you help me track my recent purchase?
+      - I need to check the status of my order.
+      - Where is my package?
+      - What's the current status of my order?
+      - Could you provide an update on my shipment?
+      - I want to know when my order will arrive.
+      - Has my order been shipped yet?
+      - Can you track my order with the order ID ABC123?
+      - My order hasn't arrived yet. Can you check its status?
+      - I'm looking for information on my recent purchase.
+      - What's the expected delivery date for my order?
+      - How do I track my package?
+      - Please provide details on my order shipment.
+      - I'm trying to locate my package. Can you assist?
+  # - intent: search_artwork 
+  #   examples: |
+  #     - [Michelangelo]( Artist).
+  #     - Show me artwork by [Vincent van Gogh](Artist).
+  #     - Find paintings by [Leonardo da Vinci](Artist).
+  #     - Search for artwork from the [impressionist](Genre) genre.
+  #     - Can you show me sculptures by [Michelangelo](Artist)?
+  #     - I'm looking for abstract artwork.
+  #     - Show me artwork featuring [flowers](theme).
+  #     - Find landscape paintings.
+  #     - Can you recommend artwork by [Pablo Picasso](Artist)?
+  #     - Search for paintings with [bright colors](Description).
+  #     - I want to see artwork from the [Renaissance](Era) era.
+  #     - Show me artwork with [animals](theme).
+  #     - Find artwork in [oil medium](Medium).
+  #     - I'm interested in artwork with [water](theme) themes.
+  #     - Can you show me artwork by [Claude Monet](Artist)?
+  #     - Search for artwork from the [Baroque](Style) style.
+  - intent: view_artist_profiles
+    examples: |
+      - artist profile
+      - artist
+      - Show me artist profiles
+      - I want to see artists' profiles
+      - Can I view artist bios?
+      - Show me information about artists
+      - I'm interested in learning about the artists
+      - Artists' profiles please
+      - Can you display artist details?
+      - Show me the list of artists
+      - View artists' backgrounds
+      - I want to know more about the artists
+      - Display artist profiles
+      - Show me the artists' biographies
+      - How can I see information about the artists?
+      - View bios of artists
+      - I'm curious about the artists
+      - Artists' profiles information
+  - intent: view_artwork_categories
+    examples: |
+      - artwork category
+      - Show me the artwork categories.
+      - What are the available artwork categories?
+      - I want to explore artwork categories.
+      - Can you display the artwork categories?
+      - Show artwork categories.
+      - What kinds of artwork categories do you have?
+      - List artwork categories.
+      - Display artwork categories.
+      - View categories for artwork.
+      - Show me different categories of artwork.
+      - What are the types of artwork categories?
+      - I'm interested in viewing artwork categories.
+      - What are the available categories for artwork?
+      - List the artwork categories available.
+      - I'd like to explore the artwork categories.
+  - intent: purchase_artwork
+    examples: |
+      - purchase 
+      - purchase artwork
+      - How can I buy this painting?
+      - I want to purchase this artwork.
+      - Can you help me place an order for this piece?
+      - How do I proceed with buying this artwork?
+      - What are the steps to purchase this painting?
+      - I'm interested in buying this artwork. What's next?
+      - I'd like to make a purchase. What do I need to do?
+      - Please guide me through the purchasing process for this piece.
+      - How can I complete the purchase of this artwork?
+      - I'm ready to buy. What's the next step?
+      - Can I place an order for this painting?
+      - What's the process for purchasing this artwork?
+      - I'm looking to buy this piece. What should I do?
+      - What are my options for buying this painting?
+      - Do you offer online purchasing for this artwork?
+  - intent: contest_information
+    examples: >
+      - Contests
+
+      - Competitions
+
+      - upcoming contests
+
+      - upcoming competitions
+
+      - Can you provide information about upcoming contests?
+
+      - I'm interested in participating in a contest. What details do you have?
+
+      - Are there any art contests happening soon?
+
+      - Could you tell me about the current contest?
+
+      - I want to know about art competitions. Can you help?
+
+      - Where can I find details about the latest contest?
+
+      - Do you have any information about art contests?
+
+      - Can you give me details about the ongoing art competition?
+
+      - I'm looking for opportunities to showcase my artwork. Any contests coming up?
+
+      - Could you provide details about the contest schedule?
+
+      - What are the requirements for participating in the art contest?
+
+      - Is there a registration deadline for the upcoming contest?
+
+      - How can I submit my entry for the art competition?
+
+      - What are the prizes for the contest winners?
+
+      - Can you recommend any art contests suitable for beginners?
+  - intent: contact_information
+    examples: |
+      - How can I contact you?
+      - What is your contact information?
+      - Can you provide me with your phone number?
+      - I need to get in touch with your support team.
+      - How do I reach your customer service?
+      - What are your contact details?
+      - I want to speak to someone from your team.
+      - Do you have an email address I can use?
+      - How can I reach out to you for assistance?
+      - Please provide your contact information.
+      - Where can I find your contact details?
+      - I need to contact you urgently.
+      - What is your helpline number?
+      - Can you share your office address?
+      - How do I get in contact with your sales department?
+      - Contact number?
+  - intent: faqs
+    examples: |
+      - What are your shipping options?
+      - How can I track my order?
+      - Do you offer international shipping?
+      - What is your return policy?
+      - How do I contact customer support?
+      - Are your products handmade?
+      - What payment methods do you accept?
+      - Can I cancel my order?
+      - Are there any discounts available?
+      - How do I reset my password?
+      - Do you have a physical store location?
+      - Are your products eco-friendly?
+      - What is your refund policy?
+      - Can I change the delivery address after placing an order?
+      - Are your products customizable?
+  - intent: recommendations
+    examples: |
+      - any recommendations
+      - recommendations
+      - Can you recommend some abstract paintings?
+      - I'm looking for recommendations on landscape artworks.
+      - Show me some popular artists in the impressionism genre.
+      - Any recommendations for contemporary sculptures?
+      - Can you suggest some minimalist artwork?
+      - What are your top recommendations for portrait paintings?
+      - I need recommendations for modern art pieces.
+      - Show me some trending art collections.
+      - Any recommendations for art inspired by nature?
+      - Can you suggest some artwork suitable for a living room?
+      - I'm interested in recommendations for art gifts.
+      - Show me some recommended artworks under $500.
+      - Can you recommend artwork for a corporate office setting?
+      - I'm looking for recommendations on art for a bedroom.
+      - Any recommendations for art pieces with vibrant colors?
+  - intent: frame_recommendation
+    examples: |
+      - Can you suggest a frame for my painting?
+      - What frame would go well with this artwork?
+      - I need help choosing a frame.
+      - Could you recommend a frame that complements this piece?
+      - I'm looking for a suitable frame for my artwork.
+      - Do you have any suggestions for framing this picture?
+      - Which frame style do you think would suit this painting?
+  - intent: frame_preference
+    examples: |
+      - I prefer wooden frames.
+      - Do you have any antique-style frames?
+      - Metal frames would be my preference.
+      - I like modern-looking frames.
+      - Can you suggest frames with intricate designs?
+  - intent: material_preference
+    examples: |
+      - wooden
+      - steel
+      - I like wooden frames.
+      - Do you have frames made of metal?
+      - Do you have frames made of wood?
+  - intent: color_preference
+    examples: |
+      - I prefer black frames.
+      - black
+      - red
+      - green
+      - Can you suggest frames in a gold color?
+      - Can you suggest frames in a brown color?
+  - intent: feedback_suggestions
+    examples: >
+      - I really loved the painting, but I think the colors could be more
+      vibrant.
+
+      - The artwork quality was excellent, but I suggest providing more variety in the collection.
+
+      - The shipping was fast, but the packaging could have been more secure to prevent damage.
+
+      - I found the artwork description to be inaccurate. It didn't match the actual piece.
+
+      - The prices are reasonable, but offering discounts for loyal customers would be great.
+
+      - I appreciate the range of art styles available, but it would be helpful to have clearer categories.
+
+      - The website interface is user-friendly, but adding a search feature would enhance the browsing experience.
+
+      - The customer service was responsive, but having a live chat option would be convenient.
+
+      - I enjoyed browsing through the artworks, but it would be nice to see more emerging artists featured.
+
+      - The checkout process was smooth, but providing more payment options would be beneficial.
+
+      - The artworks arrived in good condition, but including care instructions would be helpful.
+
+      - The website navigation could be improved for easier access to different collections.
+
+      - I had difficulty finding specific artworks. Adding filters for size and price range would be useful.
+
+      - I love the concept of the art contests, but extending the submission deadline would allow more participation.
+
+      - The packaging was eco-friendly, but reducing plastic use further would align with sustainability goals.
+  - intent: artwork_availability
+    examples: >
+      - Is the painting "Sunset by the Beach" available?
+
+      - Can I purchase the artwork "Starry Night"?
+
+      - Do you have "The Persistence of Memory" by Salvador Dali in stock?
+
+      - Is the sculpture "The Thinker" available for purchase?
+
+      - Can you check if "Girl with a Pearl Earring" is currently in stock?
+
+      - I'm interested in buying "The Scream" by Edvard Munch. Is it available?
+
+      - Are there any prints of "Water Lilies" by Claude Monet available?
+
+      - Can you tell me if "The Last Supper" by Leonardo da Vinci is available?
+
+      - I'd like to know if "The Birth of Venus" by Sandro Botticelli is available.
+
+      - Do you have any information on the availability of "The Starry Night"?
+
+      - Could you please check if "Guernica" by Pablo Picasso is available for purchase?
+
+      - Is "Mona Lisa" by Leonardo da Vinci currently in stock?
+
+      - Can you confirm the availability of "The Kiss" by Gustav Klimt?
+
+      - Is "The Great Wave off Kanagawa" by Hokusai available?
+
+      - Do you have "The Night Watch" by Rembrandt available for sale?
+  - intent: artwork_unavailability
+    examples: |
+      - Sorry, "Sunset by the Beach" is not available at the moment.
+      - Unfortunately, "Starry Night" is currently unavailable for purchase.
+      - We don't have "The Persistence of Memory" by Salvador Dali in stock.
+      - "The Thinker" sculpture is not available for purchase.
+      - "Girl with a Pearl Earring" is currently out of stock.
+      - "The Scream" by Edvard Munch is not available for purchase.
+      - We're currently out of prints of "Water Lilies" by Claude Monet.
+      - "The Last Supper" by Leonardo da Vinci is currently unavailable.
+      - "The Birth of Venus" by Sandro Botticelli is not available at the moment.
+      - Unfortunately, "The Starry Night" is not available for purchase.
+      - "Guernica" by Pablo Picasso is currently out of stock.
+      - "Mona Lisa" by Leonardo da Vinci is not available at the moment.
+      - Unfortunately, "The Kiss" by Gustav Klimt is currently unavailable.
+      - "The Great Wave off Kanagawa" by Hokusai is not available for purchase.
+      - "The Night Watch" by Rembrandt is currently unavailable for sale.
+  - intent: order_status    
+    examples: |
+      - status
+      - order status
+      - Can you please check the status of my artwork order?
+      - I'd like to know the current status of my order for the painting.
+      - What's the status of my artwork delivery?
+      - Could you provide an update on my order for the artwork?
+      - I'm curious about the status of my order. Can you help?
+      - Has my artwork been shipped? I want to check the status.
+      - Where is my artwork order currently? Can you check?
+      - I haven't received any updates on my order status. Can you provide one?
+      - Can you track my order for the artwork and let me know the status?
+      - It's been a while since I placed my order. Any updates on the status?
+      - How far along is my artwork order? Can you check the status?
+      - Can you tell me if my artwork has been dispatched yet?
+      - I'm eager to know the status of my order. Could you please check?
+      - Is there any way to track my order status for the artwork?
+      - What's the current status of my artwork order? Please provide an update.
+  - intent: payment_assistance
+    examples: >
+      - help with payment 
+
+      -  Assistance for payment
+
+      - I need help with payment options for purchasing artwork.
+
+      - Can you assist me with payment plans for buying artwork?
+
+      - How can I get assistance with making a payment for an artwork?
+
+      - I'm having trouble processing my payment for the artwork. Can you help?
+
+      - What are the available payment methods for purchasing artwork?
+
+      - Could you provide guidance on financing options for buying artwork?
+
+      - I'm interested in a piece of artwork but need assistance with payment arrangements.
+
+      - Can you help me understand the payment process for buying artwork?
+
+      - I'm not sure how to proceed with payment for the artwork. Can you provide assistance?
+
+      - Are there any discounts or promotions available for artwork purchases?
+
+      - I have questions about installment plans for purchasing artwork. Can you provide information?
+
+      - Can you guide me through the checkout process for buying artwork?
+
+      - I'd like to explore payment assistance options for purchasing artwork.
+
+      - How can I apply for financing for buying artwork?
+
+      - Do you offer any support with payment issues for artwork purchases?
+  - intent: shipping_information
+    examples: |
+      - shipping info
+      - shipping information
+      - Can you provide information about shipping my artwork?
+      - How long does it take for artwork to be shipped?
+      - What are the shipping options for my order?
+      - Can you tell me about the shipping process for artworks?
+      - I'd like to know when my artwork will be delivered.
+      - Do you offer international shipping for artwork?
+      - Can I track my artwork shipment?
+      - What courier service do you use for shipping artworks?
+      - Is there a shipping fee for artwork orders?
+      - Can I change the shipping address for my artwork order?
+      - How can I expedite the shipping of my artwork?
+      - Are there any shipping restrictions for certain artworks?
+      - Can I schedule a specific delivery date for my artwork?
+      - What packaging materials are used for shipping artworks?
+      - Do you provide insurance for artwork shipments?
+  - intent: artwork_customization
+    examples: |
+      - Can I request custom framing for this painting?
+      - I'd like to personalize the frame for my artwork.
+      - Is it possible to add a mat border to this artwork?
+      - Can I customize the size of the frame for this piece?
+      - I'm interested in adding a gold leaf finish to the frame.
+      - Can you engrave a message on the frame?
+      - Is it possible to change the color of the frame to black?
+      - Can I request a floating frame for this canvas?
+      - I'd like to customize the frame width for this painting.
+      - Can you provide options for acrylic mounting for this artwork?
+      - I'm looking to add UV protection to the frame.
+      - Can I request a shadow box frame for this 3D artwork?
+      - Is it possible to add a museum-quality glass to the frame?
+      - I'd like to explore options for gallery wrapping for this canvas.
+      - Can I customize the frame style to match my home decor?
+  - intent: artwork_reviews
+    examples: >
+      - I absolutely love the painting! The colors are so vibrant and it
+      looks even better in person.
+
+      - This artwork exceeded my expectations. It's even more stunning in real life!
+
+      - The attention to detail in this sculpture is remarkable. Truly a masterpiece.
+
+      - I'm not quite satisfied with the quality of the print. It looked better online.
+
+      - The painting arrived damaged, which was disappointing. The seller should improve their packaging.
+
+      - I'm very impressed with the artist's skill and creativity. This piece speaks to me on a deep level.
+
+      - The customer service was excellent! The staff helped me find the perfect artwork for my home.
+
+      - The shipping was fast and efficient. I received my order within a few days.
+
+      - I'm a repeat customer and I've never been disappointed with the quality of the artworks I've purchased.
+
+      - The description of the artwork was accurate, and it arrived exactly as described.
+
+      - The price seemed a bit high for the size of the artwork, but the quality justified it.
+
+      - I appreciate the variety of styles available on this platform. There's something for every taste.
+
+      - The artist's portfolio is impressive. I've added several pieces to my wishlist already.
+
+      - The artwork arrived well-packaged and in perfect condition. Kudos to the seller for taking care in shipping.
+
+      - I had some questions about the artwork, and the artist was very responsive and helpful.
+  - intent: artwork_authentication
+    examples: >
+      - How can I verify the authenticity of this artwork?
+
+      - Can you provide information on how to authenticate a painting?
+
+      - What steps should I take to ensure this artwork is authentic?
+
+      - I'm interested in buying a painting, but I want to make sure it's authentic first.
+
+      - How do I know if the artwork I'm considering is genuine?
+
+      - What are the methods used to authenticate artworks?
+
+      - Is there a way to verify the legitimacy of a sculpture?
+
+      - I heard about art forgeries. How can I protect myself from buying one?
+
+      - Can you recommend reputable authentication services for artworks?
+
+      - What are the signs of a fake artwork?
+
+      - Are there any specific documents I should look for to authenticate a piece?
+
+      - How do experts determine the authenticity of an artwork?
+
+      - I'm concerned about buying counterfeit art. What should I do?
+
+      - Do you have any advice on verifying the provenance of a painting?
+
+      - What are the common methods used by art authenticators?
+  - intent: artwork_preservation
+    examples: >
+      - How can I preserve my oil paintings to prevent them from yellowing
+      over time?
+
+      - What are the best practices for preserving watercolor artworks?
+
+      - I'm concerned about preserving my acrylic paintings. Any tips?
+
+      - Can you recommend techniques for preserving charcoal drawings?
+
+      - How should I store my pastel artworks to prevent smudging?
+
+      - What precautions should I take to preserve my mixed media artworks?
+
+      - Are there any specific conditions I should maintain to preserve my canvas prints?
+
+      - I want to ensure the long-term preservation of my ink sketches. Any advice?
+
+      - What steps should I take to preserve my digital artworks from degradation?
+
+      - Can you provide guidance on preserving my photographs to prevent fading?
+
+      - I'm worried about preserving my sculptures. Any recommendations?
+
+      - How do I protect my woodcut prints from moisture damage?
+
+      - What measures should I take to preserve my lithographs?
+
+      - Are there any products you recommend for preserving my art collection?
+
+      - Can you suggest resources for learning more about artwork preservation techniques?
+  - intent: dissatisfaction
+    examples: |
+      - I don't like that frame.
+      - That recommendation doesn't suit my artwork.
+      - I need to speak to a customer service representative.
+      - Can I get help with my order?
+      - How can I return the frame I bought?
+      - Can I get a refund for this product?
+      - My order hasn't arrived yet.
+      - The frame was delivered to the wrong address.
+      - The frame I received was damaged.
+      - The frame doesn't match the description.
+
+ 
+  - intent: deny
+    examples: |
+      - No, I'm not interested.
+      - I don't want that.
+      - Not really.
+      - No thanks.
+      - I'll pass.
+      - Nah, I'm good.
+      - Sorry, not interested.
+      - I'd rather not.
+
+  - intent: order_status_failure
+    examples: |
+      - I couldn't find my order status.
+      - The system isn't showing my order status.
+      - I'm having trouble checking my order status.
+      - It's saying my order status is unavailable.
+      - I'm getting an error when trying to check my order status.
+      - The order status page isn't loading for me.
+      - Why can't I see my order status?
+      - My order status isn't updating.
+      
+  
+  - intent: generic_contest_information
+    examples: |
+      - Can you provide information about the contest?
+      - What are the rules for participating in the contest?
+      - How can I enter the contest?
+      - When is the deadline for the contest?
+      - What are the prizes for the contest?
+      - Is there an entry fee for the contest?
+      - Where can I find the terms and conditions of the contest?
+      - Who is eligible to participate in the contest?
+      - Can I submit multiple entries to the contest?
+      - How will the winners be selected for the contest?
+      - Are there any restrictions on the content I can submit to the contest?
+      - Can I collaborate with others on my contest entry?
+      - Is there a minimum age requirement to enter the contest?
+      - Will my entry be disqualified if I miss the deadline?
+      - Can I edit my submission after I've entered the contest?
+      - How can I contact the organizers if I have more questions about the contest?
+  - intent: inquire_types_of_art
+    examples: |
+      - What are the different types of art?
+      - Can you tell me about the various forms of art?
+      - What kinds of art exist?
+      - I'm curious about the types of art.
+      - Could you explain the categories of art?
+      - What are some common types of art?
+      - Can you provide examples of different art styles?
+      - How many types of art are there?
+      - What are the main classifications of art?
+      - I want to learn about the diversity of art forms.
+      - Are there specific genres of art I should know about?
+      - Can you distinguish between different art mediums?
+      - Tell me about the various techniques used in art.
+      - What distinguishes one type of art from another?
+      - How do artists express themselves through different art forms?
+      - Can you elaborate on the styles of art that exist?
+  - intent: invalid_tracking_order_id
+    examples: |
+      - The tracking order ID I entered is invalid.
+      - I'm getting an error message saying the tracking order ID is invalid.
+      - It seems like the tracking order ID I provided is incorrect.
+      - The system is not accepting the tracking order ID I have.
+      - What should I do if the tracking order ID is not recognized?
+      - I'm having trouble with the tracking order ID. It says it's invalid.
+      - I double-checked, but the tracking order ID doesn't seem to be working.
+      - The website says the tracking order ID is invalid. What's wrong?
+      - How do I proceed if the tracking order ID is considered invalid?
+      - Is there a way to verify if the tracking order ID I have is correct?
+      - What could be the reasons for the tracking order ID to be marked as invalid?
+      - I'm unable to track my order because the tracking order ID is not valid.
+      - Could you help me troubleshoot why the tracking order ID isn't working?
+      - What steps should I take if the system rejects my tracking order ID?
+      - The tracking order ID is not being recognized by the system. What now?
+  - intent: matting
+    examples: |
+      - What options do you have for matting?
+      - Can you tell me about your matting services?
+      - I'm interested in getting my artwork matted. How does it work?
+      - Do you offer custom matting for artwork?
+      - How much does it cost to get something matted?
+      - Can I choose the color and size of the mat for my picture?
+      - What materials do you use for matting?
+      - Is there a specific thickness or type of mat you recommend?
+      - Are there different styles of matting available?
+      - Do you provide matting for different types of frames?
+      - Can you help me choose the right mat for my artwork?
+      - I need advice on matting my photographs. Can you assist?
+      - Are there any special considerations when matting delicate artwork?
+      - How long does it typically take to get something matted?
+      - Can I see examples of your previous matting work?
+      - Do you offer matting services for oversized or irregularly shaped artwork?
+      - What's the process for getting something matted with you?
+  - intent: other_custom
+    examples: |
+      - What other customization options do you offer?
+      - Besides framing and matting, what else can be customized?
+      - Are there any additional customization services available?
+      - Can you tell me about any other customizations you provide?
+      - I'm interested in further customizing my order. What are my options?
+      - Are there any special requests you can accommodate besides framing and matting?
+      - Do you offer any unique customization features?
+      - What kind of special touches can I add to my order?
+      - Can I personalize my order in any other way?
+      - Are there any premium customization services available?
+      - I'm looking for something extra special. What else can you do?
+      - Can you customize the framing process in any other ways?
+      - Is there anything else I should know about customizing my order?
+  - intent: size_custom
+    examples: |
+      - Can I customize the size of my order?
+      - Is it possible to request a custom size for my artwork?
+      - I need a specific size for my frame. Can you accommodate custom sizes?
+      - What are the options for customizing the dimensions of my order?
+      - Can I specify the exact dimensions for my framed artwork?
+      - Are there any limitations on customizing the size of my order?
+      - Do you offer custom sizing for frames and mats?
+      - Can I request a non-standard size for my framed print?
+      - How do I go about ordering a custom-sized frame?
+      - I have specific measurements in mind for my artwork. Can you help with that?
+      - Is there an additional cost for ordering a custom size?
+      - What's the process for requesting a custom frame size?
+      - Can I get a quote for a custom-sized frame?
+      - Are there any size restrictions for custom framing?
+  - intent: sizes_recommend
+    examples: |
+      - What are the recommended sizes for framing artwork?
+      - Can you suggest some standard sizes for framing prints?
+      - Do you have any recommendations for the size of my artwork?
+      - What sizes do you typically recommend for framing photos?
+      - Can you advise on the best size for framing a specific type of artwork?
+      - Are there standard dimensions you recommend for framing?
+      - What sizes do you suggest for framing posters?
+      - Do you have any guidelines for choosing the right size for framing?
+      - Can you recommend sizes for framing different types of artwork?
+      - What size would you recommend for framing a canvas print?
+      - Are there common sizes you suggest for framing?
+      - Can you provide some guidance on choosing the size for framing?
+      - What size options do you recommend for framing?
+      - Do you offer recommendations for framing dimensions?
+  - intent: upcoming_contest_information
+    examples: |
+      - Could you provide details about the upcoming contest?
+      - Can you give me information about the next contest?
+      - When is the next contest happening?
+      - What are the details of the upcoming contest?
+      - Do you have any information about the contest scheduled for next month?
+      - Where can I find details about the next art competition?
+      - Could you tell me about any upcoming art contests?
+      - Is there a contest scheduled for the near future?
+      - Can you provide details about any upcoming competitions?
+      - What is the next contest and when will it take place?
+      - Could you give me some information about the upcoming art contest?
+      - Is there any upcoming contest I should know about?
+      - When will the next art contest be announced?
+      - Do you have any information about future contests?
+  - intent: frame_custom
+    examples: |
+      - Can I customize the frame of my order?
+      - Are there options to personalize the frame?
+      - How can I customize the frame?
+      - Can I choose different materials for the frame?
+      - Are there any options to change the color of the frame?
+      - Can I request a specific design for the frame?
+      - What customization choices are available for the frame?
+      - Is it possible to engrave something on the frame?
+      - Can I add additional embellishments to the frame?
+      - Are there any special finishes available for the frame?
+      - Can I upgrade the frame to a different style?
+      - How flexible are the customization options for the frame?
+      - Can I see examples of customized frames?
+      - Are there any limitations to frame customization?
+      - Can I mix and match frame elements?
+      - Is there a cost associated with frame customization?
+      - Can I preview different frame customizations before ordering?
+
+
+  # - intent: search_artwork_by_theme
+  #   examples: |
+  #     - Show me artworks with the theme [nature](theme:art_theme)
+  #     - I want paintings with the theme [abstract](theme:art_theme)
+  #     - Do you have artworks themed [nature](theme:art_theme)?
+  #     - Paintings with the theme [nature](theme:art_theme)
+  #     - I like [nature](theme:art_theme) themes
+  #     - Show me [urban](theme:art_theme) artworks
+  #     - Display [figurative](theme:art_theme) paintings
+  #     - Artworks with [mythological](theme:art_theme) themes
+  #     - Can you show [wildlife](theme:art_theme) art?
+  #     - I'm interested in [marine](theme:art_theme) themes
+  #     - Show me [fantasy](theme:art_theme) style paintings
+  #     - I want to see [religious](theme:art_theme) artworks
+  #     - Do you have [historical](theme:art_theme) art pieces?
+  #     - Show me some [botanical](theme:art_theme) paintings
+  #     - Paintings with [literature](theme:art_theme) themes
+  #     - Artworks with the theme [abstract](theme:art_theme)
+  #     - I like [urban](theme:art_theme) themed paintings
+  #     - Show [mythological](theme:art_theme) art pieces
+  #     - Can I see [fantasy](theme:art_theme) artworks?
+  #     - Display [religious](theme:art_theme) paintings
+  #     - Any artworks with [historical](theme:art_theme) themes?
+  #     - Show me artworks with the theme [nature](theme:art_theme)
+  #     - I want paintings with the theme [abstract](theme:art_theme)
+  #     - [abstract](theme:art_theme)
+  #     - Do you have artworks themed [nature](theme:art_theme)?
+  #     - [nature](theme:art_theme) theme
+  #     - Paintings with the theme [nature](theme:art_theme)
+  #     - I like [nature](theme:art_theme) themes
+  #     - [nature](theme:art_theme) paintings
+  #     - [nature](theme:art_theme) artworks
+  #     - Show me [urban](theme:art_theme) artworks
+  #     - Display [figurative](theme:art_theme) paintings
+  #     - Artworks with [mythological](theme:art_theme) themes
+  #     - Can you show [wildlife](theme:art_theme) art?
+  #     - I'm interested in [marine](theme:art_theme)
+  #     - I want to see paintings with the theme [everyday life](theme:art_theme)
+  #     - Show me art with the [abstraction](theme:art_theme) theme
+  #     - [conceptual](theme:art_theme)
+  #     - Do you have paintings themed [abstract](theme:art_theme)?
+  #     - [animal](theme:art_theme) theme
+  #     - Paintings with the theme [other](theme:art_theme)
+  #     - I like [portrait](theme:art_theme) themes
+  #     - [abstract](theme:art_theme) artworks
+  #     - [nature](theme:art_theme) art pieces
+  #     - Show me [urban](theme:art_theme) paintings
+  #     - Display [figurative](theme:art_theme) artworks
+  #     - Artworks with [mythological](theme:art_theme) theme
+  #     - Can you show [wildlife](theme:art_theme) paintings?
+  #     - I'm interested in [marine](theme:art_theme) art
+  #     - Show me artworks with theme [everyday life](theme:art_theme)
+  #     - I want artworks with theme [abstraction](theme:art_theme)
+  #     - [conceptual](theme:art_theme)
+  #     - Do you have themed paintings [abstract](theme:art_theme)?
+  #     - [animal](theme:art_theme) artwork
+  #     - Paintings themed [other](theme:art_theme)
+  #     - I like themes of [portrait](theme:art_theme)
+  #     - [abstract](theme:art_theme) painting
+  #     - [nature](theme:art_theme) piece
+  #     - Show me [urban](theme:art_theme) art
+  #     - Display artworks of [figurative](theme:art_theme)
+  #     - Themes of [mythological](theme:art_theme) in artworks
+  #     - Can you show paintings with [wildlife](theme:art_theme)?
+  #     - I'm interested in [marine](theme:art_theme) pieces
+  #     - I want to see art with theme [everyday life](theme:art_theme)
+  #     - Show me painting with the theme [abstraction](theme:art_theme)
+  #     - [conceptual](theme:art_theme)
+  #     - Do you have themed [abstract](theme:art_theme) art?
+  #     - [animal](theme:art_theme) pieces
+  #     - Paintings themed [other](theme:art_theme)
+  #     - I like [portrait](theme:art_theme) theme
+  #     - [abstract](theme:art_theme) works
+  #     - [nature](theme:art_theme) painting
+  #     - Show me artworks with [urban](theme:art_theme)
+  #     - Display paintings of [figurative](theme:art_theme)
+  #     - Art with [mythological](theme:art_theme) themes
+  #     - Can you show [wildlife](theme:art_theme) works?
+  #     - I'm interested in [marine](theme:art_theme) artworks
+  #     - Show me [everyday life](theme:art_theme) paintings
+  #     - I want [abstraction](theme:art_theme) art
+  #     - [conceptual](theme:art_theme)
+  #     - Do you have art themed [abstract](theme:art_theme)?
+  #     - [animal](theme:art_theme)
+  #     - Theme [other](theme:art_theme) paintings
+  #     - I like [portrait](theme:art_theme)
+  #     - [abstract](theme:art_theme)
+  #     - [nature](theme:art_theme)
+  #     - [nature](theme:art_theme) paintings
+  #     - Show me [urban](theme:art_theme) art
+  #     - Show me [urban](theme:art_theme)
+  #     - Display [figurative](theme:art_theme)
+  #     - Artworks [mythological](theme:art_theme)
+  #     - Can you show [wildlife](theme:art_theme)?
+  #     - I'm interested in [marine](theme:art_theme)
+  #     - Paintings with theme [everyday life](theme:art_theme)
+  #     - Artworks with [abstraction](theme:art_theme)
+  #     - [conceptual](theme:art_theme)
+  #     - [abstract](theme:art_theme) artworks
+  #     - [animal](theme:art_theme)
+  #     - [other](theme:art_theme)
+  #     - [portrait](theme:art_theme)
+  #     - [abstract](theme:art_theme)
+
+  # - intent: search_artwork_by_title
+  #   examples: |
+  #     - Show me the painting titled [sunset](title:art_title)
+  #     - I want the artwork called [sunrise](title:art_title)
+  #     - Do you have a painting named [starry night](title:art_title)?
+  #     - Artworks titled [sunset](title:art_title)
+  #     - Can you show me [the scream](title:art_title)?
+  #     - I'm looking for [girl with a pearl earring](title:art_title)
+  #     - Do you have [the persistence of memory](title:art_title)?
+  #     - Show me the painting [mona lisa](title:art_title)
+  #     - I'd like to see [the kiss](title:art_title)
+  #     - Do you have the artwork [whistler's mother](title:art_title)?
+  #     - I want to see [american gothic](title:art_title)
+  #     - Show me [the night watch](title:art_title)
+  #     - Do you have [the birth of venus](title:art_title)?
+  #     - Can I see [the garden of earthly delights](title:art_title)?
+  #     - Show me the painting [the starry night](title:art_title)
+  #     - I want the artwork called [the last supper](title:art_title)
+  #     - Do you have a painting named [guernica](title:art_title)?
+  #     - Artworks titled [the creation of adam](title:art_title)
+  #     - Can you show me [the school of athens](title:art_title)?
+  #     - I'm looking for [the raft of the medusa](title:art_title)
+  #     - [the scream](title:art_title) art 
+  #     - [starry night](title:art_title) paintings
+  #     - show [sunset](title:art_title) 
+  #     - title is [sunrise](title:art_title)
+  #     - I'm looking for [girl with a pearl earring](title:art_title)
+  #     - Do you have [the persistence of memory](title:art_title)?
+  #     - Show me the painting [mona lisa](title:art_title)
+  #     - I'd like to see [the kiss](title:art_title)
+  #     - Do you have the artwork [whistler's mother](title:art_title)?
+  #     - I want to see [american gothic](title:art_title)
+  #     - Show me [the night watch](title:art_title)
+  #     - Do you have [the birth of venus](title:art_title)?
+  #     - Can I see [the garden of earthly delights](title:art_title)?
+  #     - Show me the painting [the starry night](title:art_title)
+  #     - I'm looking for [drawing real](title:art_title)
+  #     - Do you have [statue of isaiah new art1](title:art_title)?
+  #     - Show me the artwork [drawing](title:art_title)
+  #     - I'd like to see [painting raw](title:art_title)
+  #     - [prints life](title:art_title)
+  #     - Can I see [serigraph for life](title:art_title)?
+  #     - I'm looking for [textile world](title:art_title)
+  #     - Do you have [the hard paiting](title:art_title)?
+  #     - Show me the painting [life on serigraph](title:art_title)
+  #     - I'd like to see [paint the world](title:art_title)
+  #     - Show me [paint the life](title:art_title)
+  #     - Do you have [wall memories](title:art_title)?
+  #     - I'm looking for [winging peace](title:art_title)
+  #     - Can I see [mother theressa](title:art_title)?
+  #     - [sacred thread](title:art_title)
+  #     - Show me [black horse](title:art_title)
+  #     - Show me [Black horse](title:art_title)
+  #     - [black horse](title:art_title)
+  #     - I'm looking for [behind the cloth fence](title:art_title)
+  #     - [gandhiji now](title:art_title)
+  #     - Show me [splintered smile](title:art_title)
+  #     - I'd like to see [mirror talks](title:art_title)
+  #     - Do you have [windows and stolen smile](title:art_title)?
+  #     - Can I see [reflection](title:art_title)?
+  #     - I'm looking for [waiting among ruins](title:art_title)
+  #     - Show me [mask, mask, mask](title:art_title)
+  #     - Do you have [sculpted on a stone](title:art_title)?
+  #     - I'd like to see [com.pinarayi vijayan](title:art_title)
+  #     - Can I see [reluctant steps](title:art_title)?
+  #     - Do you have [scribbled desire](title:art_title)?
+  #     - I'm looking for [a mountain song](title:art_title)
+  #     - Show me [twilight scribbles](title:art_title)
+  #     - I'd like to see [raving red](title:art_title)
+  #     - Do you have [behind the shades](title:art_title)?
+  #     - Can I see [fast forwarrd](title:art_title)?
+  #     - I'm looking for [tinsel wings](title:art_title)
+  #     - Show me [feathered fuzz](title:art_title)
+  #     - Do you have [brushed by a wind](title:art_title)?
+  #     - I'd like to see [red rimmed gaze](title:art_title)
+  #     - Can I see [monsoon braids](title:art_title)?
+  #     - Show me [masks and visages](title:art_title)
+  #     - Do you have [lined and chiseled](title:art_title)?
+  #     - I'd like to see [nauvari saree](title:art_title)
+  #     - Can I see [an interpreter of dreams](title:art_title)?
+  #     - Do you have [buddha - ecstasy](title:art_title)?
+  #     - Show me [yes, i am yours](title:art_title)
+  #     - I'm looking for [waiting](title:art_title)
+  #     - Do you have [gaze 5](title:art_title)?
+  #     - [memory](title:art_title) show
+  #     - I'd like to see [gaze 4](title:art_title)
+  #     - Can I see [vasavadhatta](title:art_title)?
+  #     - Do you have [regret](title:art_title)?
+  #     - Show me [gaze 3](title:art_title)
+  #     - I'm looking for [mamtha banerji](title:art_title)
+  #     - Do you have [wet](title:art_title)?
+  #     - [wet](title:art_title)
+  #     - Show me [maples](title:art_title)
+  #     - [maples](title:art_title)
+  #     - anime paintings
+  #     - I'd like to see [the look](title:art_title)
+  #     - Can I see [beauty from the mud](title:art_title)?
+  #     - Do you have [it's red](title:art_title)?
+  #     - Show me [golden kailash](title:art_title)
+  #     - I'm looking for [gandhiji](title:art_title)
+  #     - Do you have [kamaraj](title:art_title)?
+  #     - [monk 1](title:art_title)
+  #     - [mona lisa](title:art_title)
+  #     - [monk2](title:art_title)
+  #     - [monk3](title:art_title)
+  #     - [monalisa](title:art_title)
+  #     - [Monk 1](title:art_title)
+  #     - [MONK 2](title:art_title)
+  #     - I'd like to see [waterlilies](title:art_title)
+  #     - I see [waterlilies - 2](title:art_title)
+  #     - [waterlilies - 2](title:art_title)
+  #     - Do you have [krishna leela](title:art_title)?
+  #     - Show me [jamboree](title:art_title)
+  #     - I'm looking for [raas leela](title:art_title)
+  #     - Do you have [ram dhun](title:art_title)?
+  #     - Show me [raga basant](title:art_title)
+  #     - I'd like to see [tune of bengal](title:art_title)
+  #     - Can I see [bengali tune](title:art_title)?
+  #     - Do you have [ganesha](title:art_title)?
+  #     - Show me [monk 2](title:art_title)
+  #     - I'm looking for [monk ambrela](title:art_title)
+  #     - Do you have [monk 4](title:art_title)?
+  #     - Show me [musical minds in conversation](title:art_title)
+  #     - I'd like to see [untitled](title:art_title)
+  #     - Can I see [snow loaded mountain range](title:art_title)?
+  #     - Do you have [DRAWING REAL](title:art_title)?
+  #     - I'm looking for [STATUE OF ISAIAH NEW ART1](title:art_title)
+  #     - Show me [DRAWING](title:art_title)
+  #     - I'd like to see [PAINTING RAW](title:art_title)
+  #     - Can I see [PRINTS LIFE](title:art_title)?
+  #     - Do you have [SERIGRAPH FOR LIFE](title:art_title)?
+  #     - I'm looking for [TEXTILE WORLD](title:art_title)
+  #     - Show me [THE HARD PAITING](title:art_title)
+  #     - I'd like to see [LIFE ON SERIGRAPH](title:art_title)
+  #     - [PAINT THE WORLD](title:art_title) art
+  #     - Do you have [PAINT THE LIFE](title:art_title)?
+  #     - I'm looking for [WALL MEMORIES](title:art_title)
+  #     - Show me [WINGING PEACE](title:art_title)
+  #     - I'd like to see [MOTHER THERESSA](title:art_title)
+  #     - Can I see [SACRED THREAD](title:art_title)?
+  #     - Do you have [BLACK HORSE](title:art_title)?
+  #     - Show me [BEHIND THE CLOTH FENCE](title:art_title)
+  #     - I'd like to see [GANDHIJI NOW](title:art_title)
+  #     - Can I see [SPLINTERED SMILE](title:art_title)?
+  #     - Do you have [MIRROR TALKS](title:art_title)?
+  #     - I'm looking for [WINDOWS AND STOLEN SMILE](title:art_title)
+  #     - Show me [REFLECTION](title:art_title)
+  #     - I'd like to see [WAITING AMONG RUINS](title:art_title)
+  #     - [MASK, MASK, MASK](title:art_title) painting
+  #     - [mask mask mask](title:art_title) painting
+  #     - Do you have [SCULPTED ON A STONE](title:art_title)?
+  #     - Show me [COM.PINARAYI VIJAYAN](title:art_title)
+  #     - I'm looking for [RELUCTANT STEPS](title:art_title)
+  #     - Do you have [SCRIBBLED DESIRE](title:art_title)?
+  #     - Show me [A MOUNTAIN SONG](title:art_title)
+  #     - I'd like to see [TWILIGHT SCRIBBLES](title:art_title)
+  #     - [RAVING RED](title:art_title)
+  #     - [raving red](title:art_title)
+  #     - [BEHIND THE SHADES](title:art_title)
+  #     - Show me [FAST FORWARRD](title:art_title)
+  #     - [TINSEL WINGS](title:art_title)
+    
+  # - intent: search_artwork_by_style
+  #   examples: |
+  #     - Show me artworks in the style of [impressionism](style:art_style)
+  #     - I want paintings in the [abstract](style:art_style) style
+  #     - Do you have artworks in [cubism](style:art_style) style?
+  #     - [cubism](style:art_style) 
+  #     - Paintings in the [realism](style:art_style) style
+  #     - Show me [figurative](style:art_style) style artworks
+  #     - Artworks in the [figurative](style:art_style) style
+  #     - Display [figurative](style:art_style) paintings
+  #     - I like [surrealism](style:art_style) style art
+  #     - Can you show [baroque](style:art_style) style paintings?
+  #     - I'm interested in [minimalism](style:art_style)
+  #     - Artworks in the [renaissance](style:art_style) style
+  #     - Show me artworks in the style of [impressionism](style:art_style)
+  #     - I want paintings in the [abstract](style:art_style) style
+  #     - [abstract](style:art_style) style
+  #     - [impressionism](style:art_style) 
+  #     - [impressionism](style:art_style) paintings
+  #     - Do you have artworks in [cubism](style:art_style) style?
+  #     - Paintings in the [realism](style:art_style) style
+  #     - Show me [figurative](style:art_style) style artworks
+  #     - Artworks in the [figurative](style:art_style) style
+  #     - Display [figurative](style:art_style) paintings
+  #     - I like [surrealism](style:art_style) style art
+  #     - Can you show [baroque](style:art_style) style paintings?
+  #     - I'm interested in [minimalism](style:art_style)
+  #     - Artworks in the [renaissance](style:art_style) style
+  #     - Show me [cubism](style:art_style)
+  #     - Do you have paintings in [fine art](style:art_style) style?
+  #     - I'm looking for [comics](style:art_style) style artworks
+  #     - Show me artworks in [expressionism](style:art_style)
+  #     - Can you display [conseptual](style:art_style) paintings?
+  #     - [Metaphysical](style:art_style) style art?
+  #     - I want to see [fine art](style:art_style) paintings
+  #     - Show me [figurative](style:art_style) artworks
+  #     - Do you have [cubism](style:art_style) paintings?
+  #     - Show me paintings in [fine art](style:art_style)
+  #     - I'm looking for [figurative](style:art_style) art
+  #     - Display [fine art](style:art_style) style artworks
+  #     - Show [fine art](style:art_style) paintings
+  #     - Do you have [cubism](style:art_style) artworks?
+  #     - Can I see [figurative](style:art_style) style paintings?
+  #     - Show me [fine art](style:art_style)
+  #     - I want [figurative](style:art_style) style art
+  #     - Display [fine art](style:art_style) paintings
+  #     - Show [fine art](style:art_style) artworks
+  #     - Do you have [figurative](style:art_style) style paintings?
+  #     - Can I see [fine art](style:art_style) art?
+  #     - Show me [figurative](style:art_style) paintings
+  #     - I like [fine art](style:art_style) style
+  #     - Display [figurative](style:art_style) artworks
+  #     - Show [fine art](style:art_style) style paintings
+  #     - Do you have [figurative](style:art_style) art?
+  #     - Can I see [fine art](style:art_style) style artworks?
+  #     - Show me [figurative](style:art_style) style paintings
+  #     - I want [fine art](style:art_style) artworks
+  #     - Display [figurative](style:art_style) style art
+  #     - Show [fine art](style:art_style) paintings
+  #     - Do you have [figurative](style:art_style) style artworks?
+  #     - Can I see [fine art](style:art_style) style art?
+  #     - Show me [figurative](style:art_style) paintings
+  #     - I like [fine art](style:art_style) style artworks
+  #     - Display [figurative](style:art_style) paintings
+  #     - Show [fine art](style:art_style) artworks
+  #     - Do you have [figurative](style:art_style) style paintings?
+  #     - Can I see [fine art](style:art_style) art?
+  #     - Show me [figurative](style:art_style) style artworks
+  #     - I want [fine art](style:art_style) paintings
+  #     - Display [figurative](style:art_style) style artworks
+  #     - Show [fine art](style:art_style) paintings
+  #     - Do you have [figurative](style:art_style) style art?
+  #     - Can I see [fine art](style:art_style) style paintings?
+  #     - Show me [figurative](style:art_style) paintings
+  #     - I like [fine art](style:art_style) artworks
+  #     - Display [figurative](style:art_style) style paintings
+  #     - Show [fine art](style:art_style) artworks
+  #     - Do you have [figurative](style:art_style) style paintings?
+  #     - Can I see [fine art](style:art_style) art?
+  #     - [figurative](style:art_style) style artworks
+  #     - I want [fine art](style:art_style) paintings
+  #     - Display [figurative](style:art_style) style artworks
+  #     - Show [fine art](style:art_style) paintings
+  #     - Do you have [figurative](style:art_style) style art?
+  #     - Can I see [fine art](style:art_style) style paintings?
+  #     - [figurative](style:art_style) paintings
+  #     - I like [fine art](style:art_style) artworks
+  #     - Display [figurative](style:art_style) style paintings
+  #     - Show [fine art](style:art_style) artworks
+  #     - Do you have [figurative](style:art_style) style paintings?
+  #     - Can I see [fine art](style:art_style) art?
+  #     - [figurative](style:art_style) style artworks
+  #     - I want [fine art](style:art_style) paintings
+  #     - [figurative](style:art_style)
+  #     - [fine art](style:art_style)
+  #     - Do you have [figurative](style:art_style) style art?
+  #     - Can I see [fine art](style:art_style) style paintings?
+  #     - Show me [figurative](style:art_style) paintings
+  #     - I like [fine art](style:art_style) artworks
+  #     - Display [figurative](style:art_style) style paintings
+  #     - Show [fine art](style:art_style) artworks
+  #     - Do you have [figurative](style:art_style) style paintings?
+  #     - Can I see [fine art](style:art_style) art?
+  #     - Show me [figurative](style:art_style) style artworks
+  #     - I want [fine art](style:art_style) paintings
+  #     - Display [figurative](style:art_style) style artworks
+  #     - Show [fine art](style:art_style) paintings
+  #     - Do you have [figurative](style:art_style) style art?
+  #     - Can I see [fine art](style:art_style) style paintings?
+  #     - Show me [figurative](style:art_style) paintings
+  #     - I like [fine art](style:art_style) artworks
+  #     - Display [figurative](style:art_style) style paintings
+  #     - Show [fine art](style:art_style) artworks
+  #     - Do you have [figurative](style:art_style) style paintings?
+  #     - Can I see [fine art](style:art_style) art?
+  #     - Show me [figurative](style:art_style) style artworks
+  #     - I want [fine art](style:art_style) paintings
+  #     - Display [figurative](style:art_style) style artworks
+  #     - Show [fine art](style:art_style) paintings
+  #     - Do you have [figurative](style:art_style) style art?
+  #     - Can I see [fine art](style:art_style) style paintings?
+  #     - Show me [figurative](style:art_style) paintings
+  #     - I like [fine art](style:art_style) artworks
+  #     - Display [figurative](style:art_style) style paintings
+  #     - Show [fine art](style:art_style) artworks
+  #     - Do you have [figurative](style:art_style) 
+  #     - show me artworks in the style of [impressionism](style:art_style)
+  #     - i want paintings in the [abstract](style:art_style) style
+  #     - [abstract](style:art_style) style
+  #     - [impressionism](style:art_style) 
+  #     - [impressionism](style:art_style) paintings
+  #     - do you have artworks in [cubism](style:art_style) style?
+  #     - paintings in the [realism](style:art_style) style
+  #     - [figurative](style:art_style) style artworks
+  #     - artworks in the [figurative](style:art_style) style
+  #     - display [figurative](style:art_style) paintings
+  #     - i like [surrealism](style:art_style) style art
+  #     - can you show [baroque](style:art_style) style paintings?
+  #     - i'm interested in [minimalism](style:art_style)
+  #     - artworks in the [renaissance](style:art_style) style
+  #     - show me [cubism](style:art_style)
+  #     - do you have paintings in [fine art](style:art_style) style?
+  #     - i'm looking for [comics](style:art_style) style artworks
+  #     - show me artworks in [expressionism](style:art_style)
+  #     - [conseptual](style:art_style)
+  #     - [metaphysical](style:art_style) 
+  #     - [expressionism](style:art_style)
+  #     - [fine art](style:art_style)
+  #     - show me [figurative](style:art_style) artworks
+  #     - do you have [cubism](style:art_style) paintings?
+  #     - show me paintings in [fine art](style:art_style)
+  #     - i'm looking for [figurative](style:art_style) art
+  #     - display [fine art](style:art_style) style artworks
+  #     - [Fine Art](style:art_style) 
+  #     - [Cubism](style:art_style) 
+  #     - [Figurative](style:art_style) 
+  #     - [fine art](style:art_style)
+  #     - [FIGURATIVE](style:art_style) 
+  #     - [CUBISM](style:art_style)
+  #     - [FINE ART](style:art_style)
+  #     - display [fine art](style:art_style) paintings
+  #     - show [fine art](style:art_style) artworks
+  #     - do you have [figurative](style:art_style) style paintings?
+  #     - can i see [fine art](style:art_style) art?
+  #     - show me [figurative](style:art_style) paintings
+  #     - i like [fine art](style:art_style) style
+  #     - display [figurative](style:art_style) artworks
+  #     - show [fine art](style:art_style) style paintings
+  #     - do you have [figurative](style:art_style) art?
+  #     - can i see [fine art](style:art_style) style artworks?
+  #     - show me [figurative](style:art_style) style paintings
+  #     - i want [fine art](style:art_style) artworks
+  #     - display [figurative](style:art_style) style art
+  #     - show [fine art](style:art_style) paintings
+  #     - do you have [figurative](style:art_style) style artworks?
+  #     - can i see [fine art](style:art_style) style art?
+  #     - show me [figurative](style:art_style) paintings
+  #     - i like [fine art](style:art_style) style artworks
+  #     - display [figurative](style:art_style) paintings
+  #     - show [fine art](style:art_style) artworks
+  #     - do you have [figurative](style:art_style) style paintings?
+  #     - can i see [fine art](style:art_style) art?
+  #     - show me [figurative](style:art_style) style artworks
+  #     - i want [fine art](style:art_style) paintings
+  #     - display [figurative](style:art_style) style artworks
+  #     - show [fine art](style:art_style) paintings
+  #     - do you have [figurative](style:art_style) style art?
+  #     - can i see [fine art](style:art_style) style paintings?
+  #     - show me [figurative](style:art_style) paintings
+  #     - i like [fine art](style:art_style) artworks
+  #     - display [figurative](style:art_style) style paintings
+  #     - show [fine art](style:art_style) artworks
+  #     - do you have [figurative](style:art_style) style paintings?
+  #     - can i see [fine art](style:art_style) art?
+  #     - show me [figurative](style:art_style) style artworks
+  #     - i want [fine art](style:art_style) paintings
+  #     - display [figurative](style:art_style) style artworks
+  #     - show [fine art](style:art_style) paintings
+  #     - do you have [figurative](style:art_style) style art?
+  #     - can i see [fine art](style:art_style) style paintings?
+  #     - show me [figurative](style:art_style) paintings
+  #     - i like [fine art](style:art_style) artworks
+  #     - display [figurative](style:art_style) style paintings
+  #     - show [fine art](style:art_style) artworks
+  #     - do you have [figurative](style:art_style) style paintings?
+  #     - can i see [fine art](style:art_style) art?
+  #     - show me [figurative](style:art_style) style artworks
+  #     - i want [fine art](style:art_style) paintings
+  #     - display [figurative](style:art_style) style artworks
+  #     - show [fine art](style:art_style) paintings
+  #     - do you have [figurative](style:art_style) style art?
+  #     - can i see [fine art](style:art_style) style paintings?
+  #     - show me [figurative](style:art_style) paintings
+  #     - i like [fine art](style:art_style) artworks
+  #     - display [figurative](style:art_style) style paintings
+  #     - show [fine art](style:art_style) artworks
+  #     - do you have [figurative](style:art_style) style paintings?
+  #     - can i see [fine art](style:art_style) art?
+
+  # - intent: search_artwork_by_category
+  #   examples: |
+  #     - Show me artworks in the [landscape](category) category
+  #     - I want paintings in the [portrait](category) category
+  #     - Do you have artworks in the [abstract](category) category?
+  #     - Paintings in the [still life](category) category
+  #     - Show me artworks in the [figurative](category) category
+  #     - I'm interested in artworks in the [historical](category) category
+  #     - Artworks with the [religious](category) category
+  #     - Can you find me paintings in the [mythological](category) category?
+  #     - Show me artworks in the [animal](category) category
+  #     - Paintings with the [nude](category) category
+  #     - Show me artworks in the [landscape](category) category
+  #     - I want paintings in the [portrait](category) category
+  #     - Do you have artworks in the [abstract](category) category?
+  #     - Paintings in the [still life](category) category
+  #     - Show me artworks in the [figurative](category) category
+  #     - I'm interested in artworks in the [historical](category) category
+  #     - Artworks with the [religious](category) category
+  #     - Can you find me paintings in the [mythological](category) category?
+  #     - Show me artworks in the [animal](category) category
+  #     - Paintings with the [nude](category) category
+  #     - Show me artworks in the [landscape](category) category
+  #     - [portrait](category) 
+  #     - [abstract](category) 
+  #     - Paintings in the [still life](category) category
+  #     - Show me artworks in the [figurative](category) category
+  #     - [historical](category)
+  #     - Artworks with the [religious](category) category
+  #     - Can you find me paintings in the [mythological](category) category?
+  #     - Show me artworks in the [animal](category) category
+  #     - Paintings with the [nude](category) category
+  #     - [nude](category)
+  #     - [animal](category)
+  #     - horse
+  #     - [fashion](category)
+  #     - Do you have [conceptual](category) paintings?
+  #     - I like [everyday life](category) art
+  #     - [portrait](category) category
+  #     - Show me paintings in the [religion](category) 
+  #     - paintings related to religions
+  #     - [religion](category) paintings
+  #     - Can I see [animal](category) paintings?
+  #     - Do you have artworks in the [fashion](category) category?
+  #     - I'm looking for [conceptual](category) art
+  #     - Show me [everyday life](category) paintings
+  #     - I want [conceptual](category) style artworks
+  #     - Artworks in the [portrait](category) category
+  #     - Do you have [religion](category) paintings?
+  #     - Can you show [animal](category) artworks?
+  #     - Show me [conceptual](category) style art
+  #     - I'm interested in [everyday life](category) paintings
+  #     - Artworks in the [fashion](category) category
+  #     - Do you have [conceptual](category) artworks?
+  #     - Show me [everyday life](category) style paintings
+  #     - I want [conceptual](category) paintings
+  #     - Paintings with the [portrait](category) category
+  #     - Can you find me [religion](category) artworks?
+  #     - I'm looking for [animal](category) style paintings
+  #     - Show me [fashion](category) artworks
+  #     - Do you have [conceptual](category) paintings?
+  #     - I like [everyday life](category) art
+  #     - Artworks with the [portrait](category) category
+  #     - Show me paintings in the [religion](category) category
+  #     - Can I see [animal](category) paintings?
+  #     - Do you have artworks in the [fashion](category) category?
+  #     - I'm looking for [conceptual](category) art
+  #     - Show me [everyday life](category) paintings
+  #     - I want [conceptual](category) style artworks
+  #     - Artworks in the [portrait](category) category
+  #     - Do you have [religion](category) paintings?
+  #     - Can you show [animal](category) artworks?
+  #     - Show me [conceptual](category) style art
+  #     - [everyday life](category) paintings
+  #     - [everyday life](category) 
+  #     - [everyday life](category) art
+  #     - Artworks in the [fashion](category) category
+  #     - Do you have [conceptual](category) artworks?
+  #     - Show me [everyday life](category) style paintings
+  #     - I want [conceptual](category) paintings
+  #     - Paintings with the [portrait](category) category
+  #     - Can you find me [religion](category) artworks?
+  #     - I'm looking for [animal](category) style paintings
+  #     - Show me [fashion](category) artworks
+  #     - Do you have [conceptual](category) paintings?
+  #     - I like [everyday life](category) art
+  #     - Artworks with the [portrait](category) category
+  #     - Show me paintings in the [religion](category) category
+  #     - Can I see [animal](category) paintings?
+  #     - Do you have artworks in the [fashion](category) category?
+  #     - I'm looking for [conceptual](category) art
+  #     - Show me [everyday life](category) paintings
+  #     - I want [conceptual](category) style artworks
+  #     - Artworks in the [portrait](category) category
+  #     - Do you have [religion](category) paintings?
+  #     - Can you show [animal](category) artworks?
+  #     - Show me [conceptual](category) style art
+  #     - I'm interested in [everyday life](category) paintings
+  #     - Artworks in the [fashion](category) category
+  #     - Do you have [conceptual](category) artworks?
+  #     - Show me [everyday life](category) style paintings
+  #     - I want [conceptual](category) paintings
+  #     - Paintings with the [portrait](category) category
+  #     - Can you find me [religion](category) artworks?
+  #     - I'm looking for [animal](category) style paintings
+  #     - Show me [fashion](category) artworks
+  #     - Do you have [conceptual](category) paintings?
+  #     - I like [everyday life](category) art
+  #     - Artworks with the [portrait](category) category
+  #     - Show me paintings in the [religion](category) category
+  #     - Can I see [animal](category) paintings?
+  #     - Do you have artworks in the [fashion](category) category?
+  #     - I'm looking for [conceptual](category) art
+  #     - Show me [everyday life](category) paintings
+  #     - I want [conceptual](category) style artworks
+  #     - Artworks in the [portrait](category) category
+  #     - Do you have [religion](category) paintings?
+  #     - Can you show [animal](category) artworks?
+  #     - Show me [conceptual](category) style art
+  #     - I'm interested in [everyday life](category) paintings
+  #     - Artworks in the [fashion](category) category
+  #     - Do you have [conceptual](category) artworks?
+  #     - Show me [everyday life](category) style paintings
+  #     - I want [conceptual](category) paintings
+  #     - Paintings with the [portrait](category) category
+  #     - Can you find me [religion](category) artworks?
+  #     - I'm looking for [animal](category) style paintings
+  #     - Show me [fashion](category) artworks
+  #     - Do you have [conceptual](category) paintings?
+  #     - I like [everyday life](category) art
+  #     - Artworks with the [portrait](category) category
+  #     - Show me paintings in the [religion](category) category
+  #     - Can I see [animal](category) paintings?
+  #     - Do you have artworks in the [fashion](category) category?
+  #     - I'm looking for [conceptual](category) art
+  #     - Show me [everyday life](category) paintings
+  #     - I want [conceptual](category) style artworks
+  #     - Artworks in the [portrait](category) category
+  #     - Do you have [religion](category) paintings?
+  #     - Can you show [animal](category) artworks?
+  #     - Show me [conceptual](category) style art
+  #     - I'm interested in [everyday life](category) paintings
+  #     - Artworks in the [fashion](category) category
+  #     - Do you have [conceptual](category) artworks?
+  #     - Show me [everyday life](category) style paintings
+  #     - [conceptual](category) paintings
+  #     - Paintings [portrait](category) category
+  #     - [Conceptual](category)
+  #     - Can you find me [religion](category) artworks?
+  #     - I'm looking for [animal](category) style paintings
+  #     - Show me [fashion](category) artworks
+  #     - Do you have [conceptual](category) paintings?
+  #     - I like [everyday life](category) art
+  #     - Artworks with the [portrait](category) category
+  #     - Show me paintings in the [religion](category) category
+  #     - Can I see [animal](category) paintings?
+  #     - Do you have artworks in the [fashion](category) category?
+  #     - I'm looking for [conceptual](category) art
+  #     - Show me [everyday life](category) paintings
+  #     - I want [conceptual](category) style artworks
+  #     - Artworks in the [portrait](category) category
+  #     - Do you have [religion](category) paintings?
+  #     - Can you show [animal](category) artworks?
+  #     - Show me [conceptual](category) style art
+  #     - I'm interested in [everyday life](category) paintings
+  #     - show me artworks in the [landscape](category) category
+  #     - i want paintings in the [portrait](category) category
+  #     - do you have artworks in the [abstract](category) category?
+  #     - paintings in the [still life](category) category
+  #     - show me artworks in the [figurative](category) category
+  #     - i'm interested in artworks in the [historical](category) category
+  #     - artworks with the [religious](category) category
+  #     - can you find me paintings in the [mythological](category) category?
+  #     - show me artworks in the [animal](category) category
+  #     - paintings with the [nude](category) category
+  #     - show me [fashion](category) artworks
+  #     - do you have [conceptual](category) paintings?
+  #     - i like [everyday life](category) art
+  #     - artworks with the [portrait](category) category
+  #     - show me paintings in the [religion](category) category
+  #     - can i see [animal](category) paintings?
+  #     - do you have artworks in the [fashion](category) category?
+  #     - i'm looking for [conceptual](category) art
+  #     - show me [everyday life](category) paintings
+  #     - i want [conceptual](category) style artworks
+  #     - artworks in the [portrait](category) category
+  #     - do you have [religion](category) paintings?
+  #     - [animal](category) 
+  #     - paintings related to animals
+  #     - animal paintings
+  #     - animals related 
+  #     - horse 
+  #     - cat
+  #     - dog
+  #     - show me [conceptual](category) style art
+  #     - i'm interested in [everyday life](category) paintings
+  #     - artworks in the [fashion](category) category
+  #     - do you have [conceptual](category) artworks?
+  #     - show me [everyday life](category) style paintings
+  #     - i want [conceptual](category) paintings
+  #     - paintings with the [portrait](category) category
+  #     - can you find me [religion](category) artworks?
+  #     - i'm looking for [animal](category) style paintings
+  #     - show me [fashion](category) artworks
+  #     - do you have [conceptual](category) paintings?
+  #     - i like [everyday life](category) art
+  #     - artworks with the [portrait](category) category
+  #     - show me paintings in the [religion](category) category
+  #     - [animal](category) paintings?
+  #     - do you have artworks in the [fashion](category) category?
+  #     - i'm looking for [conceptual](category) art
+  #     - show me [everyday life](category) paintings
+  #     - i want [conceptual](category) style artworks
+  #     - artworks in the [portrait](category) category
+  #     - do you have [religion](category) paintings?
+  #     - can you show [animal](category) artworks?
+  #     - show me [conceptual](category) style art
+  #     - i'm interested in [everyday life](category) paintings
+  #     - artworks in the [fashion](category) category
+  #     - do you have [conceptual](category) artworks?
+  #     - show me [everyday life](category) style paintings
+  #     - i want [conceptual](category) paintings
+  #     - paintings with the [portrait](category) category
+  #     - can you find me [religion](category) artworks?
+  #     - i'm looking for [animal](category) style paintings
+  #     - [fashion](category) 
+  #     - [conceptual](category) 
+  #     - [everyday life](category)
+  #     - [animals](category)
+  #     - artworks with the [portrait](category) category
+  #     - show me paintings in the [religion](category) category
+  #     - can i see [animal](category) paintings?
+  #     - do you have artworks in the [fashion](category) category?
+  #     - i'm looking for [conceptual](category) art
+  #     - show me [everyday life](category) paintings
+  #     - i want [conceptual](category) style artworks
+  #     - artworks in the [portrait](category) category
+  #     - do you have [religion](category) paintings?
+  #     - [religion](category) 
+  #     - can you show [animal](category) artworks?
+  #     - [conceptual](category) style art
+  #     - [everyday life](category) related paintings 
+  #     - artworks in the [fashion](category) category
+  #     - do you have [conceptual](category) 
+  #     - show me [everyday life](category) style paintings
+  #     - i want [conceptual](category) paintings
+  #     - paintings with the [portrait](category) category
+  #     - can you find me [religion](category) artworks?
+  #     - [animals](category) paintings
+  #     - show me [fashion](category) artworks
+  #     - do you have [conceptual](category) paintings?
+  #     - i like [everyday life](category) art
+  #     - artworks with the [portrait](category) 
+  #     - show me paintings in the [religion](category) category
+  #     - can i see [animal](category) paintings?
+  #     - do you have artworks in the [fashion](category) category?
+  #     - i'm looking for [conceptual](category) art
+  #     - show [everyday life](category) paintings
+  #     - i want [conceptual](category) style artworks
+  #     - artworks in the [portrait](category) category
+  #     - do you have [religion](category) paintings?
+  #     - can you show [animal](category) artworks?
+  #     - show me [conceptual](category) style art
+  #     - i'm interested in [everyday life](category) paintings
+          
+  # - intent: search_artwork_by_price
+  #   examples: |
+  #     - Show me artworks under [1000](price)
+  #     - artworks less than [500](price)
+  #     - I want to see paintings within [2000 dollars](price)
+  #     - display artworks under [1500 dollars](price)
+  #     - can I see works of [less than 800](price)
+  #     - find artworks for [up to 1200](price)
+  #     - give me artworks from [500](price)
+  #     - search for artworks under [7000](price)
+  #     - any artworks from [less than 3000](price)
+  #     - paintings by [200](price)
+  #     - show me artworks priced between 500 and 1000 
+  #     - I want paintings within the range of 2000 to 5000 
+  #     - Can you show artworks that cost between 1500 and 3000 
+  #     - Display artworks with prices from [1000 to 2500] 
+  #     - Find paintings between 3000 and 7000 
+  #     - I'm looking for artworks under 5000
+  #     - Please show paintings priced between 800 and 1500 rupees.
+  #     - Search for artworks within price 1000 to 2000 
+  #     - Any artworks in the range of 1200 to 2500 rupees?
+  #     - show me artworks under [10000](price)
+  #     - [5000](price)
+  #     - [10000 rupees](price)
+  #     - [1000](price) art
+  #     - [50000](price)
+  #     - [100900 rupees](price)
+  #     - [18000](price) art
+  #     - [11001](price) paintings
+  #     - paintings under [1000](price) rupees
+  #     - paintings under [1000](price) 
+  #     - I want to see paintings within [2000 rupees](price)
+  #     - display artworks under [11500 rupees](price)
+  #     - can I see works of [less than 80000](price)
+  #     - find artworks for [up to 12000](price)
+  #     - give me artworks from [5000](price)
+  #     - search for artworks under [7000](price)
+  #     - any artworks from [less than 3000](price)
+  #     - paintings by [200](price)
+  #     - show me artworks under [15000](price)
+  #     - paintings under [9000](price)
+  #     - can you find artworks under [4000 rupees](price)?
+  #     - paintings within [1000 rupees](price)
+  #     - show artworks under [8000 rupees](price)
+  #     - i want paintings less than [30000](price)
+  #     - search artworks for [up to 20000](price)
+  #     - any paintings from [6000](price)
+  #     - find artworks under [20000](price)
+  #     - give me paintings by [500](price)
+  #     - display artworks under [2000](price)
+  #     - show me artworks within [7500 rupees](price)
+  #     - can I see paintings for [less than 5000](price)?
+  #     - artworks up to [10000](price)
+  #     - find paintings under [2500 rupees](price)
+  #     - show artworks less than [15000](price)
+  #     - paintings by [1000](price)
+  #     - any artworks under [40000](price)
+  #     - artworks for [less than 7000](price)
+  #     - search paintings within [3000 rupees](price)
+  #     - display artworks under [12000 rupees](price)
+  #     - can I see artworks less than [15000](price)
+  #     - find paintings up to [3000](price)
+  #     - show me artworks from [9000](price)
+  #     - any paintings under [7000](price)
+  #     - artworks by [500](price)
+  #     - display paintings less than [8000 rupees](price)
+  #     - paintings for [up to 10000](price)
+  #     - show artworks from [4000](price)
+  #     - paintings less than [2000](price)
+  #     - find artworks under [50000 rupees](price)
+  
+  
+
+  - intent: search_artworks
+    examples: |
+      - show me artworks by [john doe](artist_name:artist)
+      - artworks by [emma watson](artist_name:artist)
+      - I want to see artworks by [michael angelo](artist_name:artist)
+      - display artworks of [leonardo da vinci](artist_name:artist)
+      - can I see works of [frida kahlo](artist_name:artist)
+      - find artworks by [pablo picasso](artist_name:artist)
+      - give me artworks from [vincent van gogh](artist_name:artist)
+      - search for artworks by [claude monet](artist_name:artist)
+      - do you have artworks by [georgia o'keeffe](artist_name:artist)
+      - I want artworks by [henri matisse](artist_name:artist)
+      - any artworks from [jackson pollock](artist_name:artist)
+      - show all artworks by [gustav klimt](artist_name:artist)
+      - what artworks does [andy warhol](artist_name:artist) have
+      - tell me about artworks by [salvador dalí](artist_name:artist)
+      - list artworks of [marc chagall](artist_name:artist)
+      - I am looking for artworks by [paul cézanne](artist_name:artist)
+      - find me some artworks by [edvard munch](artist_name:artist)
+      - search artworks by [diego rivera](artist_name:artist)
+      - can you show artworks by [mary cassatt](artist_name:artist)
+      - paintings by [egon schiele](artist_name:artist)
+      - any pieces by [gustave courbet](artist_name:artist)
+      - find paintings by [camille pissarro](artist_name:artist)
+      - tell me about the works of [pierre-auguste renoir](artist_name:artist)
+      - I want to see some pieces by [edgar degas](artist_name:artist)
+      - show me the collection of [édouard manet](artist_name:artist)
+      - artworks from [paul gauguin](artist_name:artist)
+      - show me the portfolio of [berthe morisot](artist_name:artist)
+      - [winslow homer](artist_name:artist)'s art pieces
+      - display [jan vermeer](artist_name:artist)'s artworks
+      - can I see [caravaggio](artist_name:artist)'s paintings
+      - show me [jean-michel basquiat](artist_name:artist)'s art
+      - I'd like to see [georges seurat](artist_name:artist)'s works
+      - find art pieces by [thomas eakins](artist_name:artist)
+      - show [albrecht dürer](artist_name:artist)'s collection
+      - do you have any art by [eadweard muybridge](artist_name:artist)
+      - show me any paintings from [grant wood](artist_name:artist)
+      - I'm looking for [winslow homer](artist_name:artist)'s artwork
+      - list all artworks by [edward hopper](artist_name:artist)
+      - find artworks created by [mary cassatt](artist_name:artist)
+      - show art from [james whistler](artist_name:artist)
+      - can you find art by [andrew wyeth](artist_name:artist)
+      - show me the collection of [édouard manet](artist_name:artist)
+      - artworks from [paul gauguin](artist_name:artist)
+      - show me the portfolio of [berthe morisot](artist_name:artist)
+      - [winslow homer](artist_name:artist)'s art pieces
+      - artworks by [Emma Watson](artist_name:artist)
+      - I want to see artworks by [Michael Angelo](artist_name:artist)
+      - display artworks of [Leonardo da Vinci](artist_name:artist)
+      - can I see works of [Frida Kahlo](artist_name:artist)
+      - [ajay singh](artist_name:artist)
+      - [mehak nautiyal](artist_name:artist)
+      - [akansha](artist_name:artist)
+      - [rajiv singh](artist_name:artist)
+      - [rajasekharan parameswaran](artist_name:artist)
+      - [yuvraj sadashiv patil](artist_name:artist)
+      - [swati sunil kale](artist_name:artist)
+      - [sekhar roy](artist_name:artist)
+      - [chetan katigar](artist_name:artist)
+      - [prasoon chandra poddar](artist_name:artist)
+      - [m. singh](artist_name:artist)
+      - [uttam bhattacharya](artist_name:artist)
+      - [nivas kanhere](artist_name:artist)
+      - [tanya narayan](artist_name:artist)
+      - [shubharanjan paul](artist_name:artist)
+      - [anupam pal](artist_name:artist)
+      - [pramod neelakandan](artist_name:artist)
+      - [pankaj agrawal](artist_name:artist)
+      - [rupal buch](artist_name:artist)
+      - [monalisa sarkar mitra](artist_name:artist)
+      - [joyanto deb](artist_name:artist)
+      - [sandesh khule](artist_name:artist)
+      - [ganesh doddamani](artist_name:artist)
+      - [somnath bothe](artist_name:artist)
+      - [dnyaneshwar dhavale](artist_name:artist)
+      - [pratiksha bothe](artist_name:artist)
+      - [olamide ogunade](artist_name:artist)
+      - [devika pal](artist_name:artist)
+      - [enrica teclablu cuccarese](artist_name:artist)
+      - [tatiana feoktistova](artist_name:artist)
+      - [pradeep ahirwar](artist_name:artist)
+      - [pradeep ahirwar](artist_name:artist) arts
+      - [sharmila sharma](artist_name:artist)
+      - [arjun das](artist_name:artist)
+      - [chandni jain](artist_name:artist)
+      - [nandini verma](artist_name:artist)
+      - [nandini verma](artist_name:artist) paint 
+      - [nandini verma](artist_name:artist) painting
+      - [Sekhar roy](artist_name:artist) collections
+      - I want to see artworks by ajay singh
+      - show me artworks by Mehak Nautiyal
+      - find me artworks by Akansha
+      - can I see the art of Rajiv Singh?
+      - display artworks by Rajasekharan Parameswaran
+      - show paintings from yuvraj sadashiv patil
+      - show works of swati sunil kale
+      - tell me about paintings by sekhar roy
+      - search for paintings by chetan katigar
+      - artworks by prasoon chandra poddar
+      - find artworks by m. singh
+      - show me the costliest painting
+      - show me the cheapest painting
+      - show me the most expensive painting
+      - show me the least expensive painting
+      - show me the most expensive artwork
+      - show me the least expensive artwork
+      - show me the most expensive Artworks
+      - wich is the most expensive artwork 
+      - can you show me the most expensive artwork
+      - can you show me the painting by size 15 inch by 15 inch 
+      - size of 15x15 
+      - show me art by uttam bhattacharya
+      - do you have paintings by nivas kanhere?
+      - paintings by tanya narayan
+      - tell me about works by shubharanjan paul
+      - show me artworks by anupam pal
+      - display artworks from pramod neelakandan
+      - find paintings by pankaj agrawal
+      - show me art by rupal buch
+      - can I see the works of monalisa sarkar mitra?
+      - show paintings from joyanto deb
+      - search artworks by sandesh khule
+      - I want paintings by ganesh doddamani
+      - show me works by somnath bothe
+      - tell me about art by dnyaneshwar dhavale
+      - paintings by pratiksha bothe
+      - artworks by olamide ogunade
+      - show me art by devika pal
+      - find paintings by enrica teclablu cuccarese
+      - show artworks by tatiana feoktistova
+      - paintings by pradeep ahirwar
+      - tell me about works by sharmila sharma
+      - show me artworks by arjun das
+      - display paintings by chandni jain
+      - find art by nandini verma
+      - do you have artworks by vincent van gogh?
+      - artworks from leonardo da vinci
+      - artworks of frida kahlo
+      - list paintings by pablo picasso
+      - show me paintings by andy warhol
+      - tell me about artworks by claude monet
+      - search for paintings by georgia o'keeffe
+      - display paintings of henri matisse
+      - find paintings by gustav klimt
+      - tell me about the works of egon schiele
+      - I want to see some pieces by pierre-auguste renoir
+      - show me the collection of edgar degas
+      - paintings from édouard manet
+      - artworks of berthe morisot
+      - find me the portfolio of winslow homer
+      - show me works by marc chagall
+      - search for paintings by paul cézanne
+      - tell me about artworks by edvard munch
+      - show paintings by diego rivera
+      - search artworks by mary cassatt
+      - any art by gustave courbet
+      - find works by camille pissarro
+      - tell me about the art of paul gauguin
+      - show me artworks by akansha
+      - can I see the paintings of rajiv singh
+      - find artworks by ajay singh
+      - search for the art by mehak nautiyal
+      - show me paintings by rajasekharan parameswaran
+      - give me paintings by yuvraj sadashiv patil
+      - find artworks by swati sunil kale
+      - show paintings of sekhar roy
+      - tell me about the artworks of chetan katigar
+      - search for art by prasoon chandra poddar
+      - display artworks by m. singh
+      - show me paintings by uttam bhattacharya
+      - tell me about the works of nivas kanhere
+      - I want artworks by tanya narayan
+      - find paintings by shubharanjan paul
+      - show me artworks of anupam pal
+      - do you have paintings by pramod neelakandan
+      - paintings from pankaj agrawal
+      - artworks of rupal buch
+      - display the works of monalisa sarkar mitra
+      - search for paintings by joyanto deb
+      - show me the art by sandesh khule
+      - find paintings from ganesh doddamani
+      - tell me about the works of somnath bothe
+      - Show me artworks with the theme [nature](theme:art_theme)
+      - I want paintings with the theme [abstract](theme:art_theme)
+      - Do you have artworks themed [nature](theme:art_theme)?
+      - Paintings with the theme [nature](theme:art_theme)
+      - I like [nature](theme:art_theme) themes
+      - Show me [urban](theme:art_theme) artworks
+      - Display [figurative](theme:art_theme) paintings
+      - Artworks with [mythological](theme:art_theme) themes
+      - Can you show [wildlife](theme:art_theme) art?
+      - I'm interested in [marine](theme:art_theme) themes
+      - Show me [fantasy](theme:art_theme) style paintings
+      - I want to see [religious](theme:art_theme) artworks
+      - Do you have [historical](theme:art_theme) art pieces?
+      - Show me some [botanical](theme:art_theme) paintings
+      - Paintings with [literature](theme:art_theme) themes
+      - Artworks with the theme [abstract](theme:art_theme)
+      - I like [urban](theme:art_theme) themed paintings
+      - Show [mythological](theme:art_theme) art pieces
+      - Can I see [fantasy](theme:art_theme) artworks?
+      - Display [religious](theme:art_theme) paintings
+      - Any artworks with [historical](theme:art_theme) themes?
+      - Show me artworks with the theme [nature](theme:art_theme)
+      - I want paintings with the theme [abstract](theme:art_theme)
+      - [abstract](theme:art_theme)
+      - Do you have artworks themed [nature](theme:art_theme)?
+      - [nature](theme:art_theme) theme
+      - Paintings with the theme [nature](theme:art_theme)
+      - I like [nature](theme:art_theme) themes
+      - [nature](theme:art_theme) paintings
+      - [nature](theme:art_theme) artworks
+      - Show me [urban](theme:art_theme) artworks
+      - Display [figurative](theme:art_theme) paintings
+      - Artworks with [mythological](theme:art_theme) themes
+      - Can you show [wildlife](theme:art_theme) art?
+      - I'm interested in [marine](theme:art_theme)
+      - I want to see paintings with the theme [everyday life](theme:art_theme)
+      - Show me art with the [abstraction](theme:art_theme) theme
+      - [conceptual](theme:art_theme)
+      - Do you have paintings themed [abstract](theme:art_theme)?
+      - [animal](theme:art_theme) theme
+      - Paintings with the theme [other](theme:art_theme)
+      - I like [portrait](theme:art_theme) themes
+      - [abstract](theme:art_theme) artworks
+      - [nature](theme:art_theme) art pieces
+      - Show me [urban](theme:art_theme) paintings
+      - Display [figurative](theme:art_theme) artworks
+      - Artworks with [mythological](theme:art_theme) theme
+      - Can you show [wildlife](theme:art_theme) paintings?
+      - I'm interested in [marine](theme:art_theme) art
+      - Show me artworks with theme [everyday life](theme:art_theme)
+      - I want artworks with theme [abstraction](theme:art_theme)
+      - [conceptual](theme:art_theme)
+      - Do you have themed paintings [abstract](theme:art_theme)?
+      - [animal](theme:art_theme) artwork
+      - Paintings themed [other](theme:art_theme)
+      - I like themes of [portrait](theme:art_theme)
+      - [abstract](theme:art_theme) painting
+      - [nature](theme:art_theme) piece
+      - Show me [urban](theme:art_theme) art
+      - Display artworks of [figurative](theme:art_theme)
+      - Themes of [mythological](theme:art_theme) in artworks
+      - Can you show paintings with [wildlife](theme:art_theme)?
+      - I'm interested in [marine](theme:art_theme) pieces
+      - I want to see art with theme [everyday life](theme:art_theme)
+      - Show me painting with the theme [abstraction](theme:art_theme)
+      - [conceptual](theme:art_theme)
+      - Do you have themed [abstract](theme:art_theme) art?
+      - [animal](theme:art_theme) pieces
+      - Paintings themed [other](theme:art_theme)
+      - I like [portrait](theme:art_theme) theme
+      - [abstract](theme:art_theme) works
+      - [nature](theme:art_theme) painting
+      - Show me artworks with [urban](theme:art_theme)
+      - Display paintings of [figurative](theme:art_theme)
+      - Art with [mythological](theme:art_theme) themes
+      - Can you show [wildlife](theme:art_theme) works?
+      - I'm interested in [marine](theme:art_theme) artworks
+      - Show me [everyday life](theme:art_theme) paintings
+      - I want [abstraction](theme:art_theme) art
+      - [conceptual](theme:art_theme)
+      - naruto [title]
+      - do you have anime[style] paintings 
+      - Do you have art themed [abstract](theme:art_theme)?
+      - [animal](theme:art_theme)
+      - Theme [other](theme:art_theme) paintings
+      - I like [portrait](theme:art_theme)
+      - [abstract](theme:art_theme)
+      - [nature](theme:art_theme)
+      - [nature](theme:art_theme) paintings
+      - Show me [urban](theme:art_theme) art
+      - Show me [urban](theme:art_theme)
+      - Display [figurative](theme:art_theme)
+      - Artworks [mythological](theme:art_theme)
+      - Can you show [wildlife](theme:art_theme)?
+      - I'm interested in [marine](theme:art_theme)
+      - Paintings with theme [everyday life](theme:art_theme)
+      - Artworks with [abstraction](theme:art_theme)
+      - [conceptual](theme:art_theme)
+      - [abstract](theme:art_theme) artworks
+      - [animal](theme:art_theme)
+      - [other](theme:art_theme)
+      - [portrait](theme:art_theme)
+      - [abstract](theme:art_theme)
+      - Paintings in the price range [2500](min_price) to [5500](max_price)
+      - Display artworks from [3000](min_price) to [7000](max_price)
+      - I need paintings between [1000](min_price) and [2000](max_price)
+      - Show artworks ranging from [2000](min_price) to [6000](max_price)
+      - Find paintings in the range of [3000](min_price) to [5000](max_price)
+      - Artworks from [1500](min_price) to [4000](max_price)
+      - Show me artworks between [2500](min_price) and [6000](max_price)
+      - artworks for [2500](min_price) and [6000](max_price)
+      - search paintings within [2500](min_price) and [6000](max_price)
+      - display artworks under [2500](min_price) and [6000](max_price)
+      - can I see artworks less than [15000](price)
+      - find paintings up to [2000](min_price) to [6000](max_price)
+      - show me artworks from [2000](min_price) to [6000](max_price)
+      - any paintings[2000](min_price) to [6000](max_price)
+      - artworks by [2000](min_price) and  [6000](max_price)
+      - find artworks [2000](min_price) and [6000](max_price)
+      - Search for artworks within price 1000 to 2000 
+      - Any artworks in the range of 1200 to 2500 rupees?
+      - show me artworks under [10000](price)
+      - [5000](price)
+      - [10000 rupees](price)
+      - [1000](price) art
+      - [50000](price)
+      - [100900 rupees](price)
+      - [18000](price) art
+      - [11001](price) paintings
+      - painting in range 200 to 4000
+      - between 5000 and 20000
+      - paintings under [1000](price) rupees
+      - paintings under [1000](price) 
+      - I want to see paintings within [2000 rupees](price)
+      - display artworks under [11500 rupees](price)
+      - can I see works of [less than 80000](price)
+      - find artworks for [up to 12000](price)
+      - give me artworks from [5000](price)
+      - search for artworks under [7000](price)
+      - any artworks from [less than 3000](price)
+      - paintings by [200](price)
+      - show me artworks under [15000](price)
+      - paintings under [9000](price)
+      - can you find artworks under [4000 rupees](price)?
+      - paintings within [1000 rupees](price)
+      - show artworks under [8000 rupees](price)
+      - i want paintings less than [30000](price)
+      - search artworks for [up to 20000](price)
+      - any paintings from [6000](price)
+      - find artworks under [20000](price)
+      - give me paintings by [500](price)
+      - display artworks under [2000](price)
+      - show me artworks within [7500 rupees](price)
+      - can I see paintings for [less than 5000](price)?
+      - artworks up to [10000](price)
+      - find paintings under [2500 rupees](price)
+      - show artworks less than [15000](price)
+      - paintings by [1000](price)
+      - any artworks under [40000](price)
+      - artworks for [less than 7000](price)
+      - search paintings within [3000 rupees](price)
+      - display artworks under [12000 rupees](price)
+      - can I see artworks less than [15000](price)
+      - find paintings up to [3000](price)
+      - show me artworks from [9000](price)
+      - any paintings under [7000](price)
+      - artworks by [500](price)
+      - display paintings less than [8000 rupees](price)
+      - paintings for [up to 10000](price)
+      - can you show [animal](category) artworks?
+      - show me [conceptual](category) style art
+      - i'm interested in [everyday life](category) paintings
+      - artworks in the [fashion](category) category
+      - do you have [conceptual](category) artworks?
+      - show me [everyday life](category) style paintings
+      - i want [conceptual](category) paintings
+      - paintings with the [portrait](category) category
+      - can you find me [religion](category) artworks?
+      - i'm looking for [animal](category) style paintings
+      - [fashion](category) 
+      - [conceptual](category) 
+      - [everyday life](category)
+      - [animals](category)
+      - artworks with the [portrait](category) category
+      - show me paintings in the [religion](category) category
+      - can i see [animal](category) paintings?
+      - do you have artworks in the [fashion](category) category?
+      - i'm looking for [conceptual](category) art
+      - show me [everyday life](category) paintings
+      - i want [conceptual](category) style artworks
+      - artworks in the [portrait](category) category
+      - do you have [religion](category) paintings?
+      - [religion](category) 
+      - can you show [animal](category) artworks?
+      - [conceptual](category) style art
+      - [everyday life](category) related paintings 
+      - artworks in the [fashion](category) category
+      - do you have [conceptual](category) 
+      - show me [everyday life](category) style paintings
+      - i want [conceptual](category) paintings
+      - paintings with the [portrait](category) category
+      - can you find me [religion](category) artworks?
+      - [animals](category) paintings
+      - show me [fashion](category) artworks
+      - do you have [conceptual](category) paintings?
+      - i like [everyday life](category) art
+      - artworks with the [portrait](category) 
+      - show me paintings in the [religion](category) category
+      - can i see [animal](category) paintings?
+      - do you have artworks in the [fashion](category) category?
+      - i'm looking for [conceptual](category) art
+      - show [everyday life](category) paintings
+      - i want [conceptual](category) style artworks
+      - artworks in the [portrait](category) category
+      - do you have [religion](category) paintings?
+      - can you show [animal](category) artworks?
+      - show me [conceptual](category) style art
+      - i'm interested in [everyday life](category) paintings
+      - Show me artworks in the style of [impressionism](style:art_style)
+      - I want paintings in the [abstract](style:art_style) style
+      - Do you have artworks in [cubism](style:art_style) style?
+      - [cubism](style:art_style) 
+      - Paintings in the [realism](style:art_style) style
+      - Show me [figurative](style:art_style) style artworks
+      - Artworks in the [figurative](style:art_style) style
+      - Display [figurative](style:art_style) paintings
+      - I like [surrealism](style:art_style) style art
+      - Can you show [baroque](style:art_style) style paintings?
+      - I'm interested in [minimalism](style:art_style)
+      - Artworks in the [renaissance](style:art_style) style
+      - Show me artworks in the style of [impressionism](style:art_style)
+      - I want paintings in the [abstract](style:art_style) style
+      - [abstract](style:art_style) style
+      - [impressionism](style:art_style) 
+      - [impressionism](style:art_style) paintings
+      - Do you have artworks in [cubism](style:art_style) style?
+      - Paintings in the [realism](style:art_style) style
+      - Show me [figurative](style:art_style) style artworks
+      - Artworks in the [figurative](style:art_style) style
+      - Display [figurative](style:art_style) paintings
+      - I like [surrealism](style:art_style) style art
+      - Can you show [baroque](style:art_style) style paintings?
+      - I'm interested in [minimalism](style:art_style)
+      - Artworks in the [renaissance](style:art_style) style
+      - Show me [cubism](style:art_style)
+      - Do you have paintings in [fine art](style:art_style) style?
+      - I'm looking for [comics](style:art_style) style artworks
+      - Show me artworks in [expressionism](style:art_style)
+      - Can you display [conseptual](style:art_style) paintings?
+      - [Metaphysical](style:art_style) style art?
+      - I want to see [fine art](style:art_style) paintings
+      - Show me [figurative](style:art_style) artworks
+      - Do you have [cubism](style:art_style) paintings?
+      - Show me paintings in [fine art](style:art_style)
+      - I'm looking for [figurative](style:art_style) art
+      - Display [fine art](style:art_style) style artworks
+      - Show [fine art](style:art_style) paintings
+      - Do you have [cubism](style:art_style) artworks?
+      - Can I see [figurative](style:art_style) style paintings?
+      - Show me [fine art](style:art_style)
+      - I want [figurative](style:art_style) style art
+      - Display [fine art](style:art_style) paintings
+      - Show [fine art](style:art_style) artworks
+      - Do you have [figurative](style:art_style) style paintings?
+      - Can I see [fine art](style:art_style) art?
+      - Show me [figurative](style:art_style) paintings
+      - I like [fine art](style:art_style) style
+      - Display [figurative](style:art_style) artworks
+      - Show [fine art](style:art_style) style paintings
+      - Do you have [figurative](style:art_style) art?
+      - Can I see [fine art](style:art_style) style artworks?
+      - Show me [figurative](style:art_style) style paintings
+      - I want [fine art](style:art_style) artworks
+      - Display [figurative](style:art_style) style art
+      - Show [fine art](style:art_style) paintings
+      - Do you have [figurative](style:art_style) style artworks?
+      - Can I see [fine art](style:art_style) style art?
+      - Show me [figurative](style:art_style) paintings
+      - I like [fine art](style:art_style) style artworks
+      - Display [figurative](style:art_style) paintings
+      - Show [fine art](style:art_style) artworks
+      - Do you have [figurative](style:art_style) style paintings?
+      - Can I see [fine art](style:art_style) art?
+      - Show me [figurative](style:art_style) style artworks
+      - I want [fine art](style:art_style) paintings
+      - Display [figurative](style:art_style) style artworks
+      - Show [fine art](style:art_style) paintings
+      - Do you have [figurative](style:art_style) style art?
+      - Can I see [fine art](style:art_style) style paintings?
+      - Show me [figurative](style:art_style) paintings
+      - I like [fine art](style:art_style) artworks
+      - Display [figurative](style:art_style) style paintings
+      - Show [fine art](style:art_style) artworks
+      - Do you have [figurative](style:art_style) style paintings?
+      - Can I see [fine art](style:art_style) art?
+      - [figurative](style:art_style) style artworks
+      - I want [fine art](style:art_style) paintings
+      - Display [figurative](style:art_style) style artworks
+      - Show [fine art](style:art_style) paintings
+      - Do you have [figurative](style:art_style) style art?
+      - Can I see [fine art](style:art_style) style paintings?
+      - [figurative](style:art_style) paintings
+      - I like [fine art](style:art_style) artworks
+      - Display [figurative](style:art_style) style paintings
+      - Show [fine art](style:art_style) artworks
+      - Do you have [figurative](style:art_style) style paintings?
+      - Can I see [fine art](style:art_style) art?
+      - [figurative](style:art_style) style artworks
+      - I want [fine art](style:art_style) paintings
+      - [figurative](style:art_style)
+      - [fine art](style:art_style)
+      - Do you have [figurative](style:art_style) style art?
+      - Can I see [fine art](style:art_style) style paintings?
+      - Show me [figurative](style:art_style) paintings
+      - I like [fine art](style:art_style) artworks
+      - Show me the painting titled [sunset](title:art_title)
+      - I want the artwork called [sunrise](title:art_title)
+      - Do you have a painting named [starry night](title:art_title)?
+      - Artworks titled [sunset](title:art_title)
+      - Can you show me [the scream](title:art_title)?
+      - I'm looking for [girl with a pearl earring](title:art_title)
+      - Do you have [the persistence of memory](title:art_title)?
+      - Show me the painting [mona lisa](title:art_title)
+      - I'd like to see [the kiss](title:art_title)
+      - Do you have the artwork [whistler's mother](title:art_title)?
+      - I want to see [american gothic](title:art_title)
+      - Show me [the night watch](title:art_title)
+      - Do you have [the birth of venus](title:art_title)?
+      - Can I see [the garden of earthly delights](title:art_title)?
+      - Show me the painting [the starry night](title:art_title)
+      - I want the artwork called [the last supper](title:art_title)
+      - Do you have a painting named [guernica](title:art_title)?
+      - Artworks titled [the creation of adam](title:art_title)
+      - Can you show me [the school of athens](title:art_title)?
+      - I'm looking for [the raft of the medusa](title:art_title)
+      - [the scream](title:art_title) art 
+      - [starry night](title:art_title) paintings
+      - show [sunset](title:art_title) 
+      - title is [sunrise](title:art_title)
+      - I'm looking for [girl with a pearl earring](title:art_title)
+      - Do you have [the persistence of memory](title:art_title)?
+      - Show me the painting [mona lisa](title:art_title)
+      - I'd like to see [the kiss](title:art_title)
+      - Do you have the artwork [whistler's mother](title:art_title)?
+      - I want to see [american gothic](title:art_title)
+      - Show me [the night watch](title:art_title)
+      - Do you have [the birth of venus](title:art_title)?
+      - Can I see [the garden of earthly delights](title:art_title)?
+      - Show me the painting [the starry night](title:art_title)
+      - I'm looking for [drawing real](title:art_title)
+      - Do you have [statue of isaiah new art1](title:art_title)?
+      - Show me the artwork [drawing](title:art_title)
+      - I'd like to see [painting raw](title:art_title)
+      - [prints life](title:art_title)
+      - Can I see [serigraph for life](title:art_title)?
+      - I'm looking for [textile world](title:art_title)
+      - Do you have [the hard paiting](title:art_title)?
+      - Show me the painting [life on serigraph](title:art_title)
+      - I'd like to see [paint the world](title:art_title)
+      - Show me [paint the life](title:art_title)
+      - Do you have [wall memories](title:art_title)?
+      - I'm looking for [winging peace](title:art_title)
+      - Can I see [mother theressa](title:art_title)?
+      - [sacred thread](title:art_title)
+      - Show me [black horse](title:art_title)
+      - Show me [Black horse](title:art_title)
+      - [black horse](title:art_title)
+      - I'm looking for [behind the cloth fence](title:art_title)
+      - [gandhiji now](title:art_title)
+      - Show me [splintered smile](title:art_title)
+      - I'd like to see [mirror talks](title:art_title)
+      - Do you have [windows and stolen smile](title:art_title)?
+      - Can I see [reflection](title:art_title)?
+      - I'm looking for [waiting among ruins](title:art_title)
+      - Show me [mask, mask, mask](title:art_title)
+      - Do you have [sculpted on a stone](title:art_title)?
+      - I'd like to see [com.pinarayi vijayan](title:art_title)
+      - Can I see [reluctant steps](title:art_title)?
+      - Do you have [scribbled desire](title:art_title)?
+      - I'm looking for [a mountain song](title:art_title)
+      - Show me [twilight scribbles](title:art_title)
+      - I'd like to see [raving red](title:art_title)
+      - Do you have [behind the shades](title:art_title)?
+      - Can I see [fast forwarrd](title:art_title)?
+      - I'm looking for [tinsel wings](title:art_title)
+      - Show me [feathered fuzz](title:art_title)
+      - Do you have [brushed by a wind](title:art_title)?
+      - I'd like to see [red rimmed gaze](title:art_title)
+      - Can I see [monsoon braids](title:art_title)?
+      - Show me [masks and visages](title:art_title)
+      - Do you have [lined and chiseled](title:art_title)?
+      - I'd like to see [nauvari saree](title:art_title)
+      - Can I see [an interpreter of dreams](title:art_title)?
+      - Do you have [buddha - ecstasy](title:art_title)?
+      - Show me [yes, i am yours](title:art_title)
+      - I'm looking for [waiting](title:art_title)
+      - Do you have [gaze 5](title:art_title)?
+      - [memory](title:art_title) show
+      - I'd like to see [gaze 4](title:art_title)
+      - Can I see [vasavadhatta](title:art_title)?
+      - Do you have [regret](title:art_title)?
+      - Show me [gaze 3](title:art_title)
+      - I'm looking for [mamtha banerji](title:art_title)
+      - Do you have [wet](title:art_title)?
+      - [wet](title:art_title)
+      - Show me [maples](title:art_title)
+      - [maples](title:art_title)
+      - anime paintings
+      - I'd like to see [the look](title:art_title)
+      - Can I see [beauty from the mud](title:art_title)?
+      - Do you have [it's red](title:art_title)?
+      - Show me [golden kailash](title:art_title)
+      - I'm looking for [gandhiji](title:art_title)
+      - Do you have [kamaraj](title:art_title)?
+      - [monk 1](title:art_title)
+      - [mona lisa](title:art_title)
+      - [monk2](title:art_title)
+      - [monk3](title:art_title)
+      - [monalisa](title:art_title)
+      - [Monk 1](title:art_title)
+      - [MONK 2](title:art_title)
+      - I'd like to see [waterlilies](title:art_title)
+      - I see [waterlilies - 2](title:art_title)
+      - [waterlilies - 2](title:art_title)
+      - Do you have [krishna leela](title:art_title)?
+      - Show me [jamboree](title:art_title)
+      - How many pieces are available for this product with [pro_qty]?
+      - Check the stock quantity for [pro_qty] items.
+      - What’s the quantity of the product with [pro_qty] 25?
+      - Can you tell me the available quantity for [pro_qty] 30?
+      - Find the stock quantity for the product with [pro_qty] 50.
+      - What types of products are available under [type] Canvas?
+      - Show me artworks of the [type] Sculpture.
+      - Can you find items with the [type] Print?
+      - List the [type] Digital artworks.
+      - Find products in the [type] Framed category.
+      - What artworks are created with [technic] Oil Painting?
+      - Show me items with [technic] Watercolor.
+      - Can you find pieces using [technic] Digital Art?
+      - List artworks that use [technic] Charcoal.
+      - Find paintings made with [technic] Acrylic.
+      - Find artworks in the [color] Blue.
+      - Show me items with [color] Red.
+      - What are the paintings with [color] Green?
+      - List products featuring [color] Yellow.
+      - Can you find artworks in [color] Black?
+      - Find artworks made from [meterial] Wood.
+      - What items are crafted with [meterial] Metal?
+      - Show me products using [meterial] Canvas.
+      - List artworks with [meterial] Glass.
+      - Can you find items made of [meterial] Stone?
+      - Show me artworks with a [length] of 30 cm.
+      - Find products that are [length] 50 inches.
+      - What are the items with [length] 20 cm?
+      - List artworks with [length] 10 inches.
+      - Can you find items with a [length] of 5 feet?
+
+      - What artworks have a [weight] of 2 kg?
+      - Show me items with [weight] 5 pounds.
+      - Find products that weigh [weight] 1 kg.
+      - List artworks with [weight] 3 pounds.
+      - Can you find items with a [weight] of 4 kg?
+
+      - Show me artworks with a [cmwidth] of 40 cm.
+      - Find products with [cmwidth] 60 cm.
+      - What are the items with a [cmwidth] of 20 cm
+      - List artworks featuring [cmwidth] 30 cm.
+      - Can you find items with [cmwidth] 50 cm
+
+      - What are the artworks with a [heightcm] of 70 cm?
+      - Show me items with [heightcm] 80 cm.
+      - Find products with a [heightcm] of 90 cm.
+      - List artworks featuring [heightcm] 100 cm.
+      - Can you find items with [heightcm] 60 cm?
+
+      - What are the artworks created using [medium] Acrylic?
+      - Show me items with [medium] Oil.
+      - Find products using [medium] Watercolor.
+      - List artworks featuring [medium] Charcoal.
+      - Can you find items with [medium] Pencil?
+
+      - Show me artworks available for [sellingoption] Auction.
+      - Find products with [sellingoption] Buy Now.
+      - What items are offered under [sellingoption] Best Offer?
+      - List artworks that use [sellingoption] Reserve Price.
+      - Can you show me items with [sellingoption] Fixed Price?
+
+      - What are the artworks from the [year_of_art] 2023?
+      - Find products created in [year_of_art] 2022.
+      - Show me items from [year_of_art] 2021.
+      - List artworks with [year_of_art] 2020.
+      - Can you find items with a [year_of_art] 2019?
+      - What’s the [deliver] types
+      - Show me the [deliver] types like rolled .
+      - Find products with [deliver] delivery information.
+      - List artworks with [deliver] shipping details.
+      - Can you provide [deliver] in frames
+      - What are the artworks with [deliver] in rolled
+      - paintings of length 15 inches
+      - paintings of width 20 inches
+
+
+
+
+      
+
+

@@ -1,0 +1,429 @@
+version: "3.1"
+
+rules:
+  - rule: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Say goodbye when the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  # - rule: Respond to greeting and provide options for types of painting
+  #   steps:
+  #     - intent: types_of_painting
+  #     - action: utter_types_of_painting
+
+  - rule: Respond to small size inquiries
+    steps:
+      - intent: sizes
+        entities:
+          - size: small
+      - action: utter_sizes_info
+
+  - rule: Respond to medium size inquiries
+    steps:
+      - intent: sizes
+        entities:
+          - size: medium
+      - action: utter_sizes_info
+
+  - rule: Respond to large size inquiries
+    steps:
+      - intent: sizes
+        entities:
+          - size: large
+      - action: utter_sizes_info
+
+  - rule: Respond to custom size inquiries
+    steps:
+      - intent: sizes
+        entities:
+          - size: custom
+      - action: utter_sizes_info
+
+  - rule: Respond to price range inquiry
+    steps:
+      - intent: price_range
+      - action: utter_ask_price_range
+
+  - rule: Fallback if price range not found
+    condition:
+      - active_loop: null
+    steps:
+#      - intent: price_range
+      - action: utter_price_range_not_found
+
+  - rule: Respond to top selling genre -Landscapes
+    condition:
+      - active_loop: null
+    steps:
+#      - intent: top_selling_genre
+      - action: utter_top_selling_genre_landscapes
+
+  - rule: Respond to top selling genre - Abstraction
+    condition:
+      - active_loop: null    
+    steps:
+#      - intent: top_selling_genre
+#        entities:
+#          - Genre: abstract
+      - action: utter_top_selling_genre_Abstraction
+
+  - rule: Respond to top selling genre - Portrait
+    condition:
+      - active_loop: null
+    steps:
+#      - intent: top_selling_genre
+#        entities:
+#            - Genre: Portrait
+      - action: utter_top_selling_genre_portraits
+
+  - rule: Respond to top selling genre - Conceptual
+    condition:
+      - active_loop: null    
+    steps:
+#      - intent: top_selling_genre
+      
+      - action: utter_top_selling_genre_Conceptual
+
+  - rule: Respond to top selling genre - Figurative
+    condition:
+      - active_loop: null
+    steps:
+#      - intent: top_selling_genre
+      
+      - action: utter_top_selling_genre_Figurative
+
+  - rule: Respond to inquiry about top selling genre
+    steps:
+#      - intent: top_selling_genre
+      - action: utter_top_selling_genre
+
+  - rule: Painting Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "abstract"
+    steps:
+    #- intent: types_of_artwork_collections 
+    - action: utter_painting_art_collection
+
+  - rule: Sculpture Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "sculpture"  
+    steps:
+#    - intent: types_of_artwork_collections      
+    - action: utter_sculpture_art_collection
+
+  - rule: Digital Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "digital"  
+    steps:
+#    - intent: types_of_artwork_collections
+    - action: utter_digital_art_collection
+
+  - rule: Drawing Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "drawing"
+    steps:
+#    - intent: types_of_artwork_collections
+    - action: utter_drawing_art_collection
+
+  - rule: Photography Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "photography"    
+    steps:
+#    - intent: types_of_artwork_collections      
+    - action: utter_photography_art_collection
+
+  
+
+  - rule: Serigraph Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "serigraph"  
+    steps:
+#    - intent: types_of_artwork_collections      
+    - action: utter_serigraph_art_collection
+
+  - rule: Textile Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "textile"  
+    steps:
+#    - intent: types_of_artwork_collections
+    - action: utter_textile_art_collection
+
+  - rule: Jewellery Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "jewellery"
+    steps:
+#    - intent: types_of_artwork_collections
+    - action: utter_jewellery_art_collection
+
+  - rule: Prints Art Collection
+    condition:
+    - slot_was_set:
+      - artwork_collection_type: "prints"
+    steps:
+#      - intent: types_of_artwork_collections      
+    - action: utter_prints_art_collection
+
+  - rule: Respond to working hours inquiry
+    steps:
+      - intent: working_hours
+      - action: utter_working_hours_info
+
+  - rule: Respond to offers intent - Promotion
+    steps:
+#      - intent: offers
+      - action: utter_offers_promotion
+
+  - rule: Respond to offers intent - Discount
+    steps:
+#      - intent: offers
+      - action: utter_offers_discount
+
+  - rule: Respond to offers intent - Free Shipping
+    steps:
+#      - intent: offers
+      - action: utter_offers_free_shipping
+
+  - rule: Respond to offers intent - Personalized Deal
+    steps:
+#      - intent: offers
+      - action: utter_offers_personalized_deal
+
+  - rule: Provide supporting transactions information
+    steps:
+      - intent: supporting_transactions
+      - action: utter_supporting_transactions
+
+  - rule: Provide Order ID
+    steps:
+#      - intent: order_id
+      - action: utter_order_id_received
+
+  - rule: Check for Order ID
+    condition:
+      - slot_was_set:
+          - requested_slot: order_id
+    steps:
+      - action: utter_order_id_received
+
+  - rule: No Order ID Provided
+    condition:
+      - slot_was_set:
+          - requested_slot: null
+    steps:
+#      - intent: order_id
+      - action: utter_order_id
+
+  - rule: Invalid Order ID
+    condition:
+      - active_loop: order_form
+    steps:
+#      - intent: order_id
+      - action: utter_invalid_order_id
+
+  #- rule: Search artwork by title
+   # steps:
+    #  - intent: search_artwork
+     #   entities:
+      #    - artwork_title
+      #- action: utter_search_artwork_by_title
+
+  #- rule: Search artwork by artist
+   # steps:
+    #  - intent: search_artwork_by_artist
+     #   entities:
+      #    - artist_name
+      #- action: action_search_artwork_by_artist
+
+  # - rule: Search artwork by category
+  #   steps:
+  #     - intent: search_artwork
+  #       entities:
+  #         - artwork_category
+  #     - action: utter_search_artwork_by_category
+
+  # - rule: Search artwork by style
+  #   steps:
+  #     - intent: search_artwork
+  #       entities:
+  #         - artwork_style
+  #     - action: utter_search_artwork_by_style
+
+  # - rule: Default search artwork
+  #   steps:
+  #     - intent: search_artwork
+  #     - action: utter_default_search_artwork
+
+  - rule: View Artist Profiles
+    steps:
+      - intent: view_artist_profiles
+      - action: utter_artist_profile
+
+  - rule: No Artist Profiles Available
+    condition:
+      - active_loop: null
+    steps:
+#      - intent: view_artist_profiles
+      - action: utter_no_artist_profiles
+
+  - rule: Show all artwork categories
+    steps:
+      - intent: view_artwork_categories
+      - action: utter_show_artwork_categories
+
+  - rule: Show specific category
+    steps:
+      - intent: view_artwork_categories
+      - slot_was_set:
+          - requested_category: "paintings"
+      - action: utter_show_specific_category
+
+  - rule: Default response
+    steps:
+#      - intent: view_artwork_categories
+      - action: utter_default_artwork_categories
+
+  - rule: Provide instructions for purchasing artwork
+    steps:
+      - intent: purchase_artwork
+      - action: utter_purchase_artwork
+
+  - rule: Contact Information
+    steps:
+      - intent: contact_information
+      - action: utter_contact_info_general
+
+  - rule: Feedback/Suggestions
+    steps:
+      - intent: feedback_suggestions
+      - action: utter_ask_feedback_suggestions
+      - action: utter_thank_you_feedback
+      - action: utter_acknowledge_feedback
+      - action:  utter_feedback_contact_support
+  
+  - rule: Respond to artwork preservation FAQs
+    steps:
+      - intent: artwork_preservation
+      - action: utter_artwork_preservation_tips
+
+  - rule: Provide resources for artwork preservation
+    steps:
+#      - intent: artwork_preservation
+      - action: utter_artwork_preservation_resources
+
+  - rule: Recommend products for artwork preservation
+    steps:
+#      - intent: artwork_preservation
+      - action: utter_artwork_preservation_products
+
+  - rule: Provide artwork preservation tips
+    steps:
+#      - intent: artwork_preservation
+      - action: utter_artwork_preservation_tips
+
+  - rule: Ask for artwork review
+    steps:
+      - intent: artwork_reviews
+      - action: utter_ask_for_review
+      - action: utter_ask_rating
+      - action: utter_thank_you_review
+
+#  - rule: Ask for rating after review intent
+#    condition:
+#      - active_loop: artwork_review_form
+#    steps:
+#      - intent: artwork_reviews
+#      - action: utter_ask_rating
+
+  - rule: Collect feedback after rating
+    condition:
+      - active_loop: artwork_review_form
+    steps:
+      - intent: artwork_reviews
+      - action: utter_ask_comment
+
+  - rule: Thank user after providing review
+    condition:
+      - active_loop: artwork_review_form
+    steps:
+      - action: artwork_review_form
+      - active_loop: null
+      - action: utter_thank_you_review
+
+  - rule: Handle negative feedback
+    condition:
+      - active_loop: artwork_review_form
+    steps:
+      - intent: deny
+      - action: utter_sorry_feedback
+      - action: utter_ask_another_review
+
+  - rule: Respond to Authentication Process Inquiry
+    steps:
+      - intent: artwork_authentication
+      - action: utter_authentication_info
+
+  - rule: Offer Assistance with Authentication Concerns
+    steps:
+#      - intent: artwork_authentication
+      - action: utter_authentication_assistance
+
+  - rule: Redirect to Authentication Services
+
+    condition:
+#    - slot_was_set:     
+#      - intent: artwork_authentication
+    - slot_was_set:      
+      - intent: purchase_artwork
+    steps:
+      - action: utter_authentication_redirect
+
+  - rule: Provide preservation tips
+    steps:
+#      - intent: artwork_preservation
+      - action: utter_preservation_tips
+
+  # - rule: search artwork by theme
+  #   steps:
+  #     - intent: search_artwork_by_theme
+  #       entities:
+  #         - theme
+  #     - action: action_search_artwork_by_theme
+
+  # - rule: search artwork by title
+  #   steps:
+  #     - intent: search_artwork_by_title
+  #       entities:
+  #        - title
+  #     - action: action_search_artwork_by_title
+
+  # - rule: search artwork by style
+  #   steps:
+  #     - intent: search_artwork_by_style
+  #       entities:
+  #         - style
+  #     - action: action_search_artwork_by_style
+
+  # - rule: search artwork by category
+  #   steps:
+  #     - intent: search_artwork_by_category
+  #       entities:
+  #         - category
+  #     - action: action_search_artwork_by_category
+
+  
+
+
+

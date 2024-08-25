@@ -1,0 +1,296 @@
+stories:
+  - story: Greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: Frame Recommendation Request - Happy Path
+    steps:
+      - intent: frame_recommendation
+      - action: utter_frame_recommendation
+
+  - story: Providing Artwork Description and Preferences - Happy Path
+    steps:
+      - intent: artwork_description
+      - action: utter_artwork_description
+      - intent : frame_preference
+      - action: utter_frame_preference
+      - intent: material_preference
+      - action: utter_material_preference
+
+#  - story: Providing Artwork Description and Price Inquiry - Happy Path
+#    steps:
+#      - intent: price_range
+#      - action: utter_ask_price_range
+
+  # - story: Providing types of painting- Happy Path
+  #   steps:
+  #     - intent: types_of_painting
+  #     - action: utter_types_of_painting
+
+  - story: Providing Material Preference and Color Preference - Happy Path
+    steps:
+      - intent: material_preference
+        entities:
+          - Frame_Material: "metal"
+      - action: utter_color_preference
+      - intent: color_preference
+        entities:
+          - Frame_Color: "black"
+      - action: utter_frame_recommendation
+
+  - story: Artwork Type Inquiry and Customization Request - Happy Path
+    steps:
+      - intent: types_of_art
+        entities:
+          - Artwork_Type: "canvas"
+      - action: utter_customization_options
+      - intent: artwork_customization
+      - action: utter_frame_recommendation
+
+  - story: Purchase Intent - Happy Path
+    steps:
+      - intent: purchase_artwork
+      - action: utter_purchase_artwork
+
+  - story: Sizes Inquiry - Happy Path
+    steps:
+      - intent: sizes
+      - action: utter_sizes_info
+
+  - story: Top Selling Genre Inquiry - Happy Path
+    steps:
+      - intent: top_selling_genre
+      - action: utter_top_selling_genre
+
+  - story: Types of Artwork Collections - Happy Path
+    steps:
+      - intent: types_of_artwork_collections
+      - action: utter_types_of_artwork_collections
+
+  - story: Working Hours Inquiry - Happy Path
+    steps:
+      - intent: working_hours
+      - action: utter_working_hours_info
+
+  - story: Ongoing/Upcoming Offers Inquiry - Happy Path
+    steps:
+      - intent: offers
+      - action: utter_offers_promotion
+
+  - story: Supporting Transactions Inquiry - Happy Path
+    steps:
+      - intent: supporting_transactions
+      - action: utter_supporting_transactions
+
+  - story: Order ID Inquiry - Happy Path
+    steps:
+      - intent: order_id
+      - action: utter_order_id
+
+  - story: Order ID Inquiry - Sad Path
+    steps:
+      - intent: invalid_order_id
+      - action: utter_invalid_order_id
+
+  - story: Tracking Order - Happy Path
+    steps:
+      - intent: track_order
+      - action: utter_track_order
+
+  - story: Tracking Order - Sad Path
+    steps:
+      - intent: invalid_tracking_order_id
+      - action: utter_invalid_tracking_order
+
+  - story: User wants to view artist profiles - Happy Path
+    steps:
+#      - intent: view_artist_profiles
+      - action: utter_no_artist_profiles
+
+  - story: User wants to view artwork categories - Happy Path
+    steps:
+      - intent: view_artwork_categories
+      - action: utter_show_artwork_categories
+
+  - story: User wants to purchase artwork - Happy Path
+    steps:
+      - intent: purchase_artwork
+      - action: utter_purchase_artwork
+
+  - story: User wants contest information - Happy Path
+    steps:
+      - intent: contest_information
+      - action: utter_ongoing_contest_info
+
+  - story: User wants contact information - Happy Path
+    steps:
+      - intent: contact_information
+      - action: utter_contact_info_general
+
+  - story: User is not satisfied with the response - Sad Path
+    steps:
+      - intent: dissatisfaction
+      - action: utter_dissatisfaction
+  - story: User ends conversation - Sad Path
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: User is happy - Happy Path
+    steps:
+      - intent: faqs
+      - action: utter_faqs
+
+  - story: User is happy with recommendations - Happy Path
+    steps:
+      - intent: recommendations
+      - action: utter_recommendations
+
+#  - story: ask for feedback - Happy Path
+#    steps:
+#      - intent: feedback_suggestions
+#      - action: utter_ask_feedback_suggestions
+      
+
+  - story: User wants to know artwork availability - Happy Path
+    steps:
+      - intent: artwork_availability
+      - action: utter_artwork_available
+
+  - story: The user wants to know the status of the order - Happy Path
+    steps:
+      - intent: order_status
+      - action: utter_provide_order_status
+
+  - story: order status not found - Sad Path
+    steps:
+      - intent: order_status_failure
+      - action: utter_order_status_failure
+
+  - story: User wants to know about payment assistance - Happy Path
+    steps:
+      - intent: payment_assistance
+      - action: utter_payment_assistance
+  - story: User wants to know shipping information - Happy Path
+    steps:
+      - intent: shipping_information
+      - action: utter_shipping_information
+
+  - story: Ask a review from the user - Happy Path    
+    steps:
+      - intent: artwork_reviews
+      - action: utter_ask_for_review
+      - action: utter_ask_rating
+      - action: utter_thank_you_review
+
+  - story: User wants to know authentication - Happy Path    
+    steps:
+      - intent: artwork_authentication
+      - action: utter_authentication_info
+
+  - story: happy_path_artwork_preservation
+    steps:
+#      - intent: artwork_preservation
+      - action: utter_preservation_tips
+
+
+  - story: Provide Upcoming Contest Information
+    steps:
+      - intent: upcoming_contest_information
+      - action: utter_upcoming_contest_info
+
+  - story: Provide generic Contest Information
+    steps:
+      - intent: generic_contest_information
+      - action: utter_generic_contest_info
+  - story: Provide Other Customization Options
+    steps:
+      - intent: artwork_customization
+      - action: utter_other_customization_options
+
+  - story: Provide Size Recommendation
+    steps:
+      - intent: sizes_recommend
+      - action: utter_sizes_recommendation
+
+
+
+  - story: Notify Artwork Unavailability
+    steps:
+      - intent: artwork_unavailability
+      - action: utter_artwork_unavailable
+
+  - story: search artwork by artist
+    steps:
+      - intent: search_artworks
+       # entities:
+        #  - artist_name
+      - action: action_search_artworks
+
+  - story: Provide Frame Customization Information
+    steps:
+      - intent: frame_custom
+      - action: utter_frame_customization
+
+  - story: Provide size Customization Information
+    steps:
+      - intent: size_custom
+      - action: utter_size_customization
+
+  - story: Provide matting Information
+    steps:
+      - intent: matting
+      - action: utter_matting_options
+
+
+  - story: Provide Information about Types of Art
+    steps:
+      - intent: inquire_types_of_art
+      - action: utter_types_of_art
+
+
+
+  # - story: search artwork by theme
+  #   steps:
+  #     - intent: search_artwork_by_theme
+  #       entities:
+  #         - theme
+  #     - action: action_search_artwork_by_theme
+
+  # - story: search artwork by title
+  #   steps:
+  #     - intent: search_artwork_by_title
+  #       entities:
+  #         - title
+  #     - action: action_search_artwork_by_title
+
+  # - story: search artwork by style
+  #   steps:
+  #     - intent: search_artwork_by_style
+  #       entities:
+  #         - style
+  #     - action: action_search_artwork_by_style
+
+  # - story: search artwork by category
+  #   steps:
+  #     - intent: search_artwork_by_category
+  #       entities:
+  #         - category
+  #     - action: action_search_artwork_by_category
+
+  # - story: search artwork by price
+  #   steps:
+  #     - intent: search_artwork_by_price
+  #       entities:
+  #         - price
+  #     - action: action_search_artwork_by_price
+  
+  # - story: search artworks by price range
+  #   steps:
+  #     - intent: search_artwork_by_price_range
+  #       entities:
+  #         - min_price: 2000
+  #         - max_price: 5000
+  #     - action: action_search_artwork_by_price_range
+
